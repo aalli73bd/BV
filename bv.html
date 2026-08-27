@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BV - Books Vale</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0b1f3a;
+    color:white;
+}
+
+button,input,select{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+.page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+header{
+    padding:20px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.logo{
+    font-size:36px;
+    font-weight:bold;
+}
+
+.subtitle{
+    font-size:13px;
+    opacity:.65;
+    margin-top:4px;
+}
+
+.homeMain{
+    flex:1;
+    padding:25px 18px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.welcome{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.welcome h1{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.welcome p{
+    opacity:.75;
+}
+
+.homeButtons{
+    width:100%;
+    max-width:520px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.homeButton{
+    border:none;
+    border-radius:18px;
+    padding:23px 10px;
+    background:white;
+    color:#0b1f3a;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.homeButton:active{
+    transform:scale(.97);
+}
+
+.homeIcon{
+    display:block;
+    font-size:31px;
+    margin-bottom:8px;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    font-size:12px;
+    opacity:.45;
+}
+
+
+/* الصفحات */
+
+.screen,
+.aiScreen{
+    display:none;
+    min-height:100vh;
+    flex-direction:column;
+}
+
+.topBar{
+    display:flex;
+    align-items:center;
+    padding:17px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.backButton{
+    border:none;
+    background:transparent;
+    color:white;
+    font-size:27px;
+    margin-left:12px;
+}
+
+.screenTitle{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.content{
+    width:100%;
+    max-width:600px;
+    margin:auto;
+    padding:22px 18px;
+}
+
+
+/* BV AI */
+
+.messages{
+    flex:1;
+    overflow-y:auto;
+    padding:20px;
+}
+
+.message{
+    max-width:86%;
+    padding:13px 16px;
+    border-radius:17px;
+    margin-bottom:12px;
+    line-height:1.8;
+}
+
+.bvMessage{
+    background:rgba(255,255,255,.12);
+    margin-left:auto;
+}
+
+.userMessage{
+    background:white;
+    color:#0b1f3a;
+    margin-right:auto;
+}
+
+.aiBottom{
+    padding:12px;
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.searchToggle{
+    border:1px solid rgba(255,255,255,.3);
+    background:transparent;
+    color:white;
+    border-radius:12px;
+    padding:8px 13px;
+    margin-bottom:8px;
+}
+
+.searchToggle.active{
+    background:white;
+    color:#0b1f3a;
+}
+
+.inputRow{
+    display:flex;
+    gap:8px;
+}
+
+.inputRow input{
+    flex:1;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    padding:15px;
+    font-size:15px;
+}
+
+.sendButton{
+    width:55px;
+    border:none;
+    border-radius:15px;
+    background:white;
+    color:#0b1f3a;
+    font-size:20px;
+}
+
+
+/* مدرستي */
+
+.schoolCard{
+    background:rgba(255,255,255,.08);
+    padding:18px;
+    border-radius:18px;
+    margin-bottom:18px;
+}
+
+.label{
+    display:block;
+    margin-top:16px;
+    margin-bottom:8px;
+}
+
+select{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:13px;
+    font-size:15px;
+    background:white;
+    color:#0b1f3a;
+}
+
+.primaryButton{
+    width:100%;
+    margin-top:18px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:white;
+    color:#0b1f3a;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.schoolResult{
+    display:none;
+    margin-top:18px;
+    background:rgba(255,255,255,.1);
+    border-radius:16px;
+    padding:17px;
+    line-height:1.9;
+}
+
+.lessonButton{
+    width:100%;
+    border:none;
+    padding:14px;
+    margin-top:9px;
+    border-radius:13px;
+    background:white;
+    color:#0b1f3a;
+    font-weight:bold;
+}
+
+
+/* مكتبتي */
+
+.librarySearch{
+    display:flex;
+    gap:8px;
+    margin-bottom:20px;
+}
+
+.librarySearch input{
+    flex:1;
+    border:none;
+    outline:none;
+    border-radius:14px;
+    padding:15px;
+    font-size:15px;
+}
+
+.librarySearch button{
+    width:55px;
+    border:none;
+    border-radius:14px;
+    background:white;
+    color:#0b1f3a;
+    font-size:19px;
+}
+
+.libraryInfo{
+    padding:16px;
+    border-radius:16px;
+    background:rgba(255,255,255,.08);
+    line-height:1.8;
+}
+
+.bookResult{
+    display:none;
+    margin-top:15px;
+    padding:17px;
+    border-radius:16px;
+    background:rgba(255,255,255,.1);
+}
+
+.bookResult button{
+    width:100%;
+    margin-top:10px;
+    padding:13px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#0b1f3a;
+    font-weight:bold;
+}
+
+
+/* الإعدادات */
+
+.settingItem{
+    background:rgba(255,255,255,.08);
+    padding:17px;
+    border-radius:16px;
+    margin-bottom:12px;
+}
+
+.colorChoices{
+    display:flex;
+    gap:10px;
+    margin-top:12px;
+    flex-wrap:wrap;
+}
+
+.colorChoice{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:3px solid white;
+}
+
+.blue{
+    background:#0b1f3a;
+}
+
+.purple{
+    background:#24133f;
+}
+
+.green{
+    background:#123b32;
+}
+
+.black{
+    background:#111;
+}
+
+
+/* الدروس */
+
+.lessonCard{
+    padding:16px;
+    background:rgba(255,255,255,.08);
+    border-radius:15px;
+    margin-bottom:10px;
+}
+
+.lessonCard button{
+    margin-top:10px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:11px;
+    background:white;
+    color:#0b1f3a;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- الصفحة الرئيسية -->
+
+<div class="page" id="homePage">
+
+<header>
+
+<div class="logo">
+BV
+</div>
+
+<div class="subtitle">
+Books Vale
+</div>
+
+</header>
+
+
+<main class="homeMain">
+
+<div class="welcome">
+
+<h1>
+مرحبًا بك في BV 👋
+</h1>
+
+<p>
+ماذا تريد أن تتعلم اليوم؟
+</p>
+
+</div>
+
+
+<div class="homeButtons">
+
+
+<button class="homeButton"
+onclick="openScreen('aiScreen')">
+
+<span class="homeIcon">
+🤖
+</span>
+
+BV AI
+
+</button>
+
+
+<button class="homeButton"
+onclick="openScreen('schoolScreen')">
+
+<span class="homeIcon">
+🎓
+</span>
+
+مدرستي
+
+</button>
+
+
+<button class="homeButton"
+onclick="openScreen('libraryScreen')">
+
+<span class="homeIcon">
+📚
+</span>
+
+مكتبتي
+
+</button>
+
+
+<button class="homeButton"
+onclick="openScreen('settingsScreen')">
+
+<span class="homeIcon">
+⚙️
+</span>
+
+الإعدادات
+
+</button>
+
+
+</div>
+
+</main>
+
+
+<footer>
+BV • Books Vale
+</footer>
+
+</div>
+
+
+
+<!-- BV AI -->
+
+<div class="aiScreen" id="aiScreen">
+
+
+<div class="topBar">
+
+<button class="backButton"
+onclick="goHome()">
+→
+</button>
+
+<div class="screenTitle">
+🤖 BV AI
+</div>
+
+</div>
+
+
+<div class="messages" id="messages">
+
+
+<div class="message bvMessage">
+
+مرحبًا! أنا BV 🤖
+
+<br><br>
+
+اسألني عن أي شيء تريد تعلمه.
+
+<br><br>
+
+ويمكنك تفعيل 🔎 البحث عندما نربطه بالبحث الحقيقي.
+
+</div>
+
+
+</div>
+
+
+<div class="aiBottom">
+
+
+<button class="searchToggle"
+id="searchToggle"
+onclick="toggleSearch()">
+
+🔎 البحث
+
+</button>
+
+
+<div class="inputRow">
+
+<input
+id="aiInput"
+type="text"
+placeholder="اكتب سؤالك...">
+
+<button
+class="sendButton"
+onclick="sendMessage()">
+
+➤
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- مدرستي -->
+
+<div class="screen" id="schoolScreen">
+
+
+<div class="topBar">
+
+<button class="backButton"
+onclick="goHome()">
+→
+</button>
+
+<div class="screenTitle">
+🎓 مدرستي
+</div>
+
+</div>
+
+
+<div class="content">
+
+<h2>
+اختر منهجك
+</h2>
+
+
+<div class="schoolCard">
+
+
+<label class="label">
+🌍 الدولة
+</label>
+
+<select id="country">
+
+<option value="">
+اختر الدولة
+</option>
+
+<option value="iraq">
+🇮🇶 العراق
+</option>
+
+</select>
+
+
+<label class="label">
+🎓 الصف
+</label>
+
+<select id="grade">
+
+<option value="">
+اختر الصف
+</option>
+
+<option value="third">
+الثالث متوسط
+</option>
+
+<option value="fourth">
+الرابع الإعدادي
+</option>
+
+<option value="fifth">
+الخامس الإعدادي
+</option>
+
+<option value="sixth">
+السادس الإعدادي
+</option>
+
+</select>
+
+
+<label class="label">
+📚 المادة
+</label>
+
+<select id="subject">
+
+<option value="">
+اختر المادة
+</option>
+
+<option value="math">
+📐 الرياضيات
+</option>
+
+<option value="physics">
+⚛️ الفيزياء
+</option>
+
+<option value="chemistry">
+🧪 الكيمياء
+</option>
+
+<option value="biology">
+🧬 الأحياء
+</option>
+
+</select>
+
+
+<button class="primaryButton"
+onclick="openCurriculum()">
+
+فتح المنهج 🎓
+
+</button>
+
+</div>
+
+
+<div
+class="schoolResult"
+id="schoolResult">
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- مكتبتي -->
+
+<div class="screen" id="libraryScreen">
+
+
+<div class="topBar">
+
+<button class="backButton"
+onclick="goHome()">
+→
+</button>
+
+<div class="screenTitle">
+📚 مكتبتي
+</div>
+
+</div>
+
+
+<div class="content">
+
+
+<h2>
+ابحث عن كتاب
+</h2>
+
+
+<div class="librarySearch">
+
+<input
+id="bookSearch"
+type="text"
+placeholder="اكتب اسم الكتاب...">
+
+<button
+onclick="searchBook()">
+
+🔎
+
+</button>
+
+</div>
+
+
+<div class="libraryInfo">
+
+📚 اكتب اسم الكتاب الذي تبحث عنه.
+
+<br><br>
+
+إذا كان الكتاب موجودًا في BV
+سيظهر لك مباشرة.
+
+<br><br>
+
+وإذا لم يكن موجودًا،
+سيبحث BV لاحقًا في المصادر الخارجية المسموح بها.
+
+</div>
+
+
+<div
+class="bookResult"
+id="bookResult">
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- الإعدادات -->
+
+<div class="screen" id="settingsScreen">
+
+
+<div class="topBar">
+
+<button class="backButton"
+onclick="goHome()">
+→
+</button>
+
+<div class="screenTitle">
+⚙️ الإعدادات
+</div>
+
+</div>
+
+
+<div class="content">
+
+
+<h2>
+تخصيص BV
+</h2>
+
+
+<div class="settingItem">
+
+<b>
+🎨 لون الواجهة
+</b>
+
+
+<div class="colorChoices">
+
+
+<button
+class="colorChoice blue"
+onclick="changeTheme('#0b1f3a')">
+</button>
+
+
+<button
+class="colorChoice purple"
+onclick="changeTheme('#24133f')">
+</button>
+
+
+<button
+class="colorChoice green"
+onclick="changeTheme('#123b32')">
+</button>
+
+
+<button
+class="colorChoice black"
+onclick="changeTheme('#111111')">
+</button>
+
+
+</div>
+
+</div>
+
+
+<div class="settingItem">
+
+🌐 اللغة
+
+<br><br>
+
+العربية
+
+<br>
+
+English
+
+<br>
+
+ويمكن إضافة لغات أخرى لاحقًا.
+
+</div>
+
+
+<div class="settingItem">
+
+🔊 الصوت
+
+<br><br>
+
+ميزة الصوت ستضاف لاحقًا.
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+/* التنقل */
+
+function hideAll(){
+
+document.getElementById("homePage")
+.style.display="none";
+
+document.getElementById("aiScreen")
+.style.display="none";
+
+document.getElementById("schoolScreen")
+.style.display="none";
+
+document.getElementById("libraryScreen")
+.style.display="none";
+
+document.getElementById("settingsScreen")
+.style.display="none";
+
+}
+
+
+function openScreen(id){
+
+hideAll();
+
+document.getElementById(id)
+.style.display="flex";
+
+}
+
+
+function goHome(){
+
+hideAll();
+
+document.getElementById("homePage")
+.style.display="flex";
+
+}
+
+
+
+/* البحث في BV AI */
+
+let searchEnabled=false;
+
+
+function toggleSearch(){
+
+searchEnabled=!searchEnabled;
+
+const button=
+document.getElementById("searchToggle");
+
+
+if(searchEnabled){
+
+button.classList.add("active");
+
+button.innerHTML=
+"🔎 البحث مفعّل";
+
+}else{
+
+button.classList.remove("active");
+
+button.innerHTML=
+"🔎 البحث";
+
+}
+
+}
+
+
+
+/* إرسال رسالة */
+
+function sendMessage(){
+
+const input=
+document.getElementById("aiInput");
+
+const text=
+input.value.trim();
+
+
+if(text===""){
+return;
+}
+
+
+const messages=
+document.getElementById("messages");
+
+
+const user=
+document.createElement("div");
+
+user.className=
+"message userMessage";
+
+user.textContent=text;
+
+messages.appendChild(user);
+
+
+input.value="";
+
+
+const schoolWords=[
+
+"الثالث متوسط",
+"الرابع الاعدادي",
+"الرابع الإعدادي",
+"الخامس الاعدادي",
+"الخامس الإعدادي",
+"السادس الاعدادي",
+"السادس الإعدادي",
+"رياضيات",
+"فيزياء",
+"كيمياء",
+"احياء",
+"أحياء",
+"منهج",
+"درس"
+
+];
+
+
+const schoolQuestion=
+schoolWords.some(
+word=>text.includes(word)
+);
+
+
+const reply=
+document.createElement("div");
+
+reply.className=
+"message bvMessage";
+
+
+if(schoolQuestion){
+
+reply.innerHTML=
+
+"🎓 يبدو أن سؤالك متعلق بالمنهج الدراسي."+
+"<br><br>"+
+"يمكنك الدخول إلى <b>مدرستي</b> واختيار الصف والمادة.";
+
+
+}else if(searchEnabled){
+
+reply.innerHTML=
+
+"🔎 البحث مفعّل."+
+"<br><br>"+
+"عندما نربط BV بمحرك البحث الحقيقي، سأبحث في المصادر وأعرض النتائج.";
+
+
+}else{
+
+reply.innerHTML=
+
+"🤖 استلمت سؤالك."+
+"<br><br>"+
+"الواجهة جاهزة، وفي المرحلة التالية سنربط BV بالذكاء الاصطناعي الحقيقي.";
+
+}
+
+
+messages.appendChild(reply);
+
+messages.scrollTop=
+messages.scrollHeight;
+
+}
+
+
+
+/* مدرستي */
+
+function openCurriculum(){
+
+const country=
+document.getElementById("country").value;
+
+const grade=
+document.getElementById("grade").value;
+
+const subject=
+document.getElementById("subject").value;
+
+const result=
+document.getElementById("schoolResult");
+
+
+if(!country || !grade || !subject){
+
+result.style.display="block";
+
+result.innerHTML=
+"⚠️ اختر الدولة والصف والمادة أولًا.";
+
+return;
+
+}
+
+
+let gradeName="";
+
+
+if(grade==="third")
+gradeName="الثالث متوسط";
+
+if(grade==="fourth")
+gradeName="الرابع الإعدادي";
+
+if(grade==="fifth")
+gradeName="الخامس الإعدادي";
+
+if(grade==="sixth")
+gradeName="السادس الإعدادي";
+
+
+let subjectName="";
+
+
+if(subject==="math")
+subjectName="الرياضيات";
+
+if(subject==="physics")
+subjectName="الفيزياء";
+
+if(subject==="chemistry")
+subjectName="الكيمياء";
+
+if(subject==="biology")
+subjectName="الأحياء";
+
+
+result.style.display="block";
+
+
+result.innerHTML=
+
+"<b>🇮🇶 العراق</b><br><br>"+
+
+"🎓 الصف: "+
+gradeName+
+"<br>"+
+
+"📚 المادة: "+
+subjectName+
+"<br><br>"+
+
+"<b>📖 كتاب المنهج</b>"+
+
+"<button class='lessonButton' onclick='openBookFromSchool()'>"+
+"📖 فتح الكتاب"+
+"</button>"+
+
+"<button class='lessonButton' onclick='showLessons()'>"+
+"📚 الفصول والدروس"+
+"</button>"+
+
+"<button class='lessonButton' onclick='askBVAboutLesson()'>"+
+"🤖 اسأل BV عن المنهج"+
+"</button>";
+
+}
+
+
+function openBookFromSchool(){
+
+alert(
+"📖 هنا سنربط كتاب المنهج الحقيقي بالمصدر المسموح به."
+);
+
+}
+
+
+function showLessons(){
+
+const result=
+document.getElementById("schoolResult");
+
+
+result.innerHTML+=
+
+"<br><br>"+
+
+"<div class='lessonCard'>"+
+"📘 الفصل الأول"+
+"<br>"+
+"<button onclick='openLesson()'>"+
+"فتح الدروس"+
+"</button>"+
+"</div>"+
+
+"<div class='lessonCard'>"+
+"📗 الفصل الثاني"+
+"<br>"+
+"<button onclick='openLesson()'>"+
+"فتح الدروس"+
+"</button>"+
+"</div>"+
+
+"<div class='lessonCard'>"+
+"📙 الفصل الثالث"+
+"<br>"+
+"<button onclick='openLesson()'>"+
+"فتح الدروس"+
+"</button>"+
+"</div>";
+
+}
+
+
+function openLesson(){
+
+alert(
+"📚 هنا ستظهر الدروس بعد ربط BV ببيانات الكتاب الحقيقية."
+);
+
+}
+
+
+function askBVAboutLesson(){
+
+openScreen("aiScreen");
+
+
+const messages=
+document.getElementById("messages");
+
+
+const reply=
+document.createElement("div");
+
+reply.className=
+"message bvMessage";
+
+reply.innerHTML=
+
+"🎓 أنت الآن تريد التعلم حسب منهجك الدراسي."+
+"<br><br>"+
+"عندما نربط قاعدة المناهج بالذكاء الاصطناعي، سأعرف الكتاب والفصل والدرس.";
+
+messages.appendChild(reply);
+
+}
+
+
+
+/* مكتبتي */
+
+function searchBook(){
+
+const input=
+document.getElementById("bookSearch");
+
+const text=
+input.value.trim();
+
+const result=
+document.getElementById("bookResult");
+
+
+if(text===""){
+
+result.style.display="block";
+
+result.innerHTML=
+"⚠️ اكتب اسم الكتاب أولًا.";
+
+return;
+
+}
+
+
+result.style.display="block";
+
+
+result.innerHTML=
+
+"<b>📚 البحث عن:</b><br><br>"+
+
+text+
+
+"<br><br>"+
+
+"🔎 سيتم لاحقًا البحث في مكتبة BV والمكتبات الخارجية."+
+
+"<button onclick='openInternalBook()'>"+
+"📖 فتح من BV"+
+"</button>"+
+
+"<button onclick='openExternalSource()'>"+
+"🌐 البحث في المصادر الخارجية"+
+"</button>";
+
+}
+
+
+function openInternalBook(){
+
+alert(
+"📖 إذا كان الكتاب محفوظًا داخل BV فسيُفتح هنا."
+);
+
+}
+
+
+function openExternalSource(){
+
+alert(
+"🌐 هنا سنربط BV بالمكتبات والمصادر الخارجية المسموح بها."
+);
+
+}
+
+
+
+/* المظهر */
+
+function changeTheme(color){
+
+document.body.style.background=color;
+
+}
+
+</script>
+
+
+</body>
+
+  </html>
