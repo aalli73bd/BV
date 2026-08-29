@@ -109,9 +109,6 @@ footer{
     opacity:.45;
 }
 
-
-/* الصفحات */
-
 .screen,
 .aiScreen{
     display:none;
@@ -146,7 +143,6 @@ footer{
     padding:22px 18px;
 }
 
-
 /* BV AI */
 
 .messages{
@@ -156,11 +152,13 @@ footer{
 }
 
 .message{
-    max-width:86%;
+    max-width:95%;
     padding:13px 16px;
     border-radius:17px;
     margin-bottom:12px;
     line-height:1.8;
+    overflow-wrap:break-word;
+    word-wrap:break-word;
 }
 
 .bvMessage{
@@ -215,7 +213,6 @@ footer{
     color:#0b1f3a;
     font-size:20px;
 }
-
 
 /* مدرستي */
 
@@ -274,7 +271,6 @@ select{
     font-weight:bold;
 }
 
-
 /* مكتبتي */
 
 .librarySearch{
@@ -327,7 +323,6 @@ select{
     font-weight:bold;
 }
 
-
 /* الإعدادات */
 
 .settingItem{
@@ -367,7 +362,6 @@ select{
     background:#111;
 }
 
-
 /* الدروس */
 
 .lessonCard{
@@ -391,9 +385,7 @@ select{
 </style>
 </head>
 
-
 <body>
-
 
 <!-- الصفحة الرئيسية -->
 
@@ -401,16 +393,13 @@ select{
 
 <header>
 
-<div class="logo">
-BV
-</div>
+<div class="logo">BV</div>
 
 <div class="subtitle">
 Books Vale
 </div>
 
 </header>
-
 
 <main class="homeMain">
 
@@ -426,62 +415,47 @@ Books Vale
 
 </div>
 
-
 <div class="homeButtons">
-
 
 <button class="homeButton"
 onclick="openScreen('aiScreen')">
 
-<span class="homeIcon">
-🤖
-</span>
+<span class="homeIcon">🤖</span>
 
 BV AI
 
 </button>
 
-
 <button class="homeButton"
 onclick="openScreen('schoolScreen')">
 
-<span class="homeIcon">
-🎓
-</span>
+<span class="homeIcon">🎓</span>
 
 مدرستي
 
 </button>
 
-
 <button class="homeButton"
 onclick="openScreen('libraryScreen')">
 
-<span class="homeIcon">
-📚
-</span>
+<span class="homeIcon">📚</span>
 
 مكتبتي
 
 </button>
 
-
 <button class="homeButton"
 onclick="openScreen('settingsScreen')">
 
-<span class="homeIcon">
-⚙️
-</span>
+<span class="homeIcon">⚙️</span>
 
 الإعدادات
 
 </button>
 
-
 </div>
 
 </main>
-
 
 <footer>
 BV • Books Vale
@@ -489,12 +463,9 @@ BV • Books Vale
 
 </div>
 
-
-
 <!-- BV AI -->
 
 <div class="aiScreen" id="aiScreen">
-
 
 <div class="topBar">
 
@@ -509,9 +480,7 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="messages" id="messages">
-
 
 <div class="message bvMessage">
 
@@ -519,20 +488,17 @@ onclick="goHome()">
 
 <br><br>
 
-اسألني عن أي شيء تريد تعلمه.
+أنا مساعدك الدراسي.
 
 <br><br>
 
-ويمكنك تفعيل 🔎 البحث عندما نربطه بالبحث الحقيقي.
+اسألني عن درس أو مفهوم تريد فهمه.
 
 </div>
 
-
 </div>
-
 
 <div class="aiBottom">
-
 
 <button class="searchToggle"
 id="searchToggle"
@@ -541,7 +507,6 @@ onclick="toggleSearch()">
 🔎 البحث
 
 </button>
-
 
 <div class="inputRow">
 
@@ -564,12 +529,9 @@ onclick="sendMessage()">
 
 </div>
 
-
-
 <!-- مدرستي -->
 
 <div class="screen" id="schoolScreen">
-
 
 <div class="topBar">
 
@@ -584,16 +546,13 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="content">
 
 <h2>
 اختر منهجك
 </h2>
 
-
 <div class="schoolCard">
-
 
 <label class="label">
 🌍 الدولة
@@ -610,7 +569,6 @@ onclick="goHome()">
 </option>
 
 </select>
-
 
 <label class="label">
 🎓 الصف
@@ -640,7 +598,6 @@ onclick="goHome()">
 
 </select>
 
-
 <label class="label">
 📚 المادة
 </label>
@@ -669,7 +626,6 @@ onclick="goHome()">
 
 </select>
 
-
 <button class="primaryButton"
 onclick="openCurriculum()">
 
@@ -679,23 +635,18 @@ onclick="openCurriculum()">
 
 </div>
 
-
 <div
 class="schoolResult"
 id="schoolResult">
 </div>
 
-
 </div>
 
 </div>
-
-
 
 <!-- مكتبتي -->
 
 <div class="screen" id="libraryScreen">
-
 
 <div class="topBar">
 
@@ -710,14 +661,11 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="content">
-
 
 <h2>
 ابحث عن كتاب
 </h2>
-
 
 <div class="librarySearch">
 
@@ -735,7 +683,6 @@ onclick="searchBook()">
 
 </div>
 
-
 <div class="libraryInfo">
 
 📚 اكتب اسم الكتاب الذي تبحث عنه.
@@ -747,28 +694,22 @@ onclick="searchBook()">
 
 <br><br>
 
-وإذا لم يكن موجودًا،
-سيبحث BV لاحقًا في المصادر الخارجية المسموح بها.
+سيتم تطوير المكتبة وإضافة الكتب والمصادر لاحقًا.
 
 </div>
-
 
 <div
 class="bookResult"
 id="bookResult">
 </div>
 
-
 </div>
 
 </div>
-
-
 
 <!-- الإعدادات -->
 
 <div class="screen" id="settingsScreen">
-
 
 <div class="topBar">
 
@@ -783,14 +724,11 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="content">
-
 
 <h2>
 تخصيص BV
 </h2>
-
 
 <div class="settingItem">
 
@@ -798,38 +736,31 @@ onclick="goHome()">
 🎨 لون الواجهة
 </b>
 
-
 <div class="colorChoices">
-
 
 <button
 class="colorChoice blue"
 onclick="changeTheme('#0b1f3a')">
 </button>
 
-
 <button
 class="colorChoice purple"
 onclick="changeTheme('#24133f')">
 </button>
-
 
 <button
 class="colorChoice green"
 onclick="changeTheme('#123b32')">
 </button>
 
-
 <button
 class="colorChoice black"
 onclick="changeTheme('#111111')">
 </button>
 
-
 </div>
 
 </div>
-
 
 <div class="settingItem">
 
@@ -843,12 +774,11 @@ onclick="changeTheme('#111111')">
 
 English
 
-<br>
+<br><br>
 
 ويمكن إضافة لغات أخرى لاحقًا.
 
 </div>
-
 
 <div class="settingItem">
 
@@ -860,351 +790,508 @@ English
 
 </div>
 
-
 </div>
 
 </div>
-
-
 
 <script>
 
-
-/* التنقل */
+/* =========================
+   التنقل
+========================= */
 
 function hideAll(){
 
-document.getElementById("homePage")
-.style.display="none";
-
-document.getElementById("aiScreen")
-.style.display="none";
-
-document.getElementById("schoolScreen")
-.style.display="none";
-
-document.getElementById("libraryScreen")
-.style.display="none";
-
-document.getElementById("settingsScreen")
-.style.display="none";
+    document.getElementById("homePage").style.display = "none";
+    document.getElementById("aiScreen").style.display = "none";
+    document.getElementById("schoolScreen").style.display = "none";
+    document.getElementById("libraryScreen").style.display = "none";
+    document.getElementById("settingsScreen").style.display = "none";
 
 }
-
 
 function openScreen(id){
 
-hideAll();
+    hideAll();
 
-document.getElementById(id)
-.style.display="flex";
+    const screen = document.getElementById(id);
+
+    if(screen){
+        screen.style.display = "flex";
+    }
 
 }
-
 
 function goHome(){
 
-hideAll();
+    hideAll();
 
-document.getElementById("homePage")
-.style.display="flex";
+    document.getElementById("homePage").style.display = "flex";
 
 }
 
+/* =========================
+   البحث
+========================= */
 
-
-/* البحث في BV AI */
-
-let searchEnabled=false;
-
+let searchEnabled = false;
 
 function toggleSearch(){
 
-searchEnabled=!searchEnabled;
+    searchEnabled = !searchEnabled;
 
-const button=
-document.getElementById("searchToggle");
+    const button =
+        document.getElementById("searchToggle");
 
+    if(searchEnabled){
 
-if(searchEnabled){
+        button.classList.add("active");
+        button.innerHTML = "🔎 البحث مفعّل";
 
-button.classList.add("active");
+    }else{
 
-button.innerHTML=
-"🔎 البحث مفعّل";
+        button.classList.remove("active");
+        button.innerHTML = "🔎 البحث";
 
-}else{
-
-button.classList.remove("active");
-
-button.innerHTML=
-"🔎 البحث";
+    }
 
 }
 
+/* =========================
+   BV AI
+========================= */
+
+const BV_BACKEND =
+    "https://bv-backend.lwsylfr78.workers.dev/chat";
+
+async function sendMessage(){
+
+    const input =
+        document.getElementById("aiInput");
+
+    const text =
+        input.value.trim();
+
+    if(text === ""){
+        return;
+    }
+
+    const messages =
+        document.getElementById("messages");
+
+    /* رسالة الطالب */
+
+    const user =
+        document.createElement("div");
+
+    user.className =
+        "message userMessage";
+
+    user.textContent =
+        text;
+
+    messages.appendChild(user);
+
+    input.value = "";
+
+    /* رسالة الانتظار */
+
+    const loading =
+        document.createElement("div");
+
+    loading.className =
+        "message bvMessage";
+
+    loading.textContent =
+        "🤖 BV يفكر...";
+
+    messages.appendChild(loading);
+
+    messages.scrollTop =
+        messages.scrollHeight;
+
+    /* المحادثة السابقة */
+
+    const previousMessages = [];
+
+    const messageElements =
+        messages.querySelectorAll(".message");
+
+    messageElements.forEach(function(element){
+
+        if(element === loading){
+            return;
+        }
+
+        const content =
+            element.textContent.trim();
+
+        if(!content){
+            return;
+        }
+
+        const isUser =
+            element.classList.contains("userMessage");
+
+        previousMessages.push({
+
+            role: isUser
+                ? "user"
+                : "assistant",
+
+            content: content
+
+        });
+
+    });
+
+    try{
+
+        const response =
+            await fetch(
+                BV_BACKEND,
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        message: text,
+
+                        messages:
+                            previousMessages.slice(-20),
+
+                        mode: "study",
+
+                        subject: "",
+
+                        level: ""
+
+                    })
+
+                }
+            );
+
+        if(!response.ok){
+
+            throw new Error(
+                "HTTP " + response.status
+            );
+
+        }
+
+        const data =
+            await response.json();
+
+        loading.remove();
+
+        const reply =
+            document.createElement("div");
+
+        reply.className =
+            "message bvMessage";
+
+        if(data.success && data.answer){
+
+            reply.textContent =
+                data.answer;
+
+            reply.style.whiteSpace =
+                "pre-wrap";
+
+        }else{
+
+            reply.textContent =
+                "⚠️ وصل الطلب إلى الخادم، لكن لم تصل إجابة الذكاء الاصطناعي.";
+
+        }
+
+        messages.appendChild(reply);
+
+        messages.scrollTop =
+            messages.scrollHeight;
+
+    }catch(error){
+
+        console.error(
+            "BV AI Error:",
+            error
+        );
+
+        loading.remove();
+
+        const errorMessage =
+            document.createElement("div");
+
+        errorMessage.className =
+            "message bvMessage";
+
+        errorMessage.textContent =
+            "⚠️ حدث خطأ في الاتصال بـ BV AI. حاول مرة أخرى.";
+
+        messages.appendChild(
+            errorMessage
+        );
+
+        messages.scrollTop =
+            messages.scrollHeight;
+
+    }
+
 }
 
+/* إرسال السؤال بالضغط على Enter */
 
+document
+    .getElementById("aiInput")
+    .addEventListener(
+        "keydown",
+        function(event){
 
-/* إرسال رسالة */
-async function sendMessage(){ const input = document.getElementById("aiInput"); const text = input.value.trim(); if(text === ""){ return; } const messages = document.getElementById("messages"); // رسالة الطالب const user = document.createElement("div"); user.className = "message userMessage"; user.textContent = text; messages.appendChild(user); input.value = ""; // رسالة انتظار const loading = document.createElement("div"); loading.className = "message bvMessage"; loading.textContent = "🤖 BV يفكر..."; messages.appendChild(loading); messages.scrollTop = messages.scrollHeight; // جمع المحادثة السابقة const previousMessages = []; const messageElements = messages.querySelectorAll(".message"); messageElements.forEach((element) => { // لا نرسل رسالة الانتظار if(element === loading){ return; } const isUser = element.classList.contains("userMessage"); const content = element.textContent.trim(); if(!content){ return; } previousMessages.push({ role: isUser ? "user" : "assistant", content: content }); }); try{ const response = await fetch( "https://bv-backend.lwsylfr78.workers.dev/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message: text, messages: previousMessages.slice(-20), mode: "study", subject: "", level: "" }) } ); if(!response.ok){ throw new Error("HTTP " + response.status); } const data = await response.json(); // إزالة رسالة الانتظار loading.remove(); const reply = document.createElement("div"); reply.className = "message bvMessage"; if(data.success && data.answer){ // textContent يحمي الصفحة من إدخال HTML غير مرغوب reply.textContent = data.answer; // الحفاظ على أسطر الإجابة reply.style.whiteSpace = "pre-wrap"; }else{ reply.textContent = "⚠️ لم أستطع الحصول على إجابة الآن. حاول مرة أخرى."; } messages.appendChild(reply); messages.scrollTop = messages.scrollHeight; }catch(error){ console.error( "BV AI Error:", error ); loading.remove(); const errorMessage = document.createElement("div"); errorMessage.className = "message bvMessage"; errorMessage.textContent = "⚠️ حدث خطأ أثناء الاتصال بمساعد BV. تأكد من اتصال الإنترنت وحاول مرة أخرى."; messages.appendChild(errorMessage); messages.scrollTop = messages.scrollHeight; } } 
-function sendMessage(){
-document.getElementById("aiInput").addEventListener( "keydown", function(event){ if(event.key === "Enter"){ event.preventDefault(); sendMessage(); } } ); 
-/* مدرستي */
+            if(event.key === "Enter"){
+
+                event.preventDefault();
+
+                sendMessage();
+
+            }
+
+        }
+    );
+
+/* =========================
+   مدرستي
+========================= */
 
 function openCurriculum(){
 
-const country=
-document.getElementById("country").value;
+    const country =
+        document.getElementById("country").value;
 
-const grade=
-document.getElementById("grade").value;
+    const grade =
+        document.getElementById("grade").value;
 
-const subject=
-document.getElementById("subject").value;
+    const subject =
+        document.getElementById("subject").value;
 
-const result=
-document.getElementById("schoolResult");
+    const result =
+        document.getElementById("schoolResult");
 
+    if(!country || !grade || !subject){
 
-if(!country || !grade || !subject){
+        result.style.display =
+            "block";
 
-result.style.display="block";
+        result.innerHTML =
+            "⚠️ اختر الدولة والصف والمادة أولًا.";
 
-result.innerHTML=
-"⚠️ اختر الدولة والصف والمادة أولًا.";
+        return;
 
-return;
+    }
 
-}
+    let gradeName = "";
 
+    if(grade === "third")
+        gradeName = "الثالث متوسط";
 
-let gradeName="";
+    if(grade === "fourth")
+        gradeName = "الرابع الإعدادي";
 
+    if(grade === "fifth")
+        gradeName = "الخامس الإعدادي";
 
-if(grade==="third")
-gradeName="الثالث متوسط";
+    if(grade === "sixth")
+        gradeName = "السادس الإعدادي";
 
-if(grade==="fourth")
-gradeName="الرابع الإعدادي";
+    let subjectName = "";
 
-if(grade==="fifth")
-gradeName="الخامس الإعدادي";
+    if(subject === "math")
+        subjectName = "الرياضيات";
 
-if(grade==="sixth")
-gradeName="السادس الإعدادي";
+    if(subject === "physics")
+        subjectName = "الفيزياء";
 
+    if(subject === "chemistry")
+        subjectName = "الكيمياء";
 
-let subjectName="";
+    if(subject === "biology")
+        subjectName = "الأحياء";
 
+    result.style.display =
+        "block";
 
-if(subject==="math")
-subjectName="الرياضيات";
+    result.innerHTML =
 
-if(subject==="physics")
-subjectName="الفيزياء";
+        "<b>🇮🇶 العراق</b><br><br>" +
 
-if(subject==="chemistry")
-subjectName="الكيمياء";
+        "🎓 الصف: " +
+        gradeName +
+        "<br>" +
 
-if(subject==="biology")
-subjectName="الأحياء";
+        "📚 المادة: " +
+        subjectName +
+        "<br><br>" +
 
+        "<b>📖 المنهج الدراسي</b>" +
 
-result.style.display="block";
+        "<button class='lessonButton' onclick='openBookFromSchool()'>" +
+        "📖 فتح الكتاب" +
+        "</button>" +
 
+        "<button class='lessonButton' onclick='showLessons()'>" +
+        "📚 الفصول والدروس" +
+        "</button>" +
 
-result.innerHTML=
-
-"<b>🇮🇶 العراق</b><br><br>"+
-
-"🎓 الصف: "+
-gradeName+
-"<br>"+
-
-"📚 المادة: "+
-subjectName+
-"<br><br>"+
-
-"<b>📖 كتاب المنهج</b>"+
-
-"<button class='lessonButton' onclick='openBookFromSchool()'>"+
-"📖 فتح الكتاب"+
-"</button>"+
-
-"<button class='lessonButton' onclick='showLessons()'>"+
-"📚 الفصول والدروس"+
-"</button>"+
-
-"<button class='lessonButton' onclick='askBVAboutLesson()'>"+
-"🤖 اسأل BV عن المنهج"+
-"</button>";
+        "<button class='lessonButton' onclick='askBVAboutLesson()'>" +
+        "🤖 اسأل BV عن المنهج" +
+        "</button>";
 
 }
-
 
 function openBookFromSchool(){
 
-alert(
-"📖 هنا سنربط كتاب المنهج الحقيقي بالمصدر المسموح به."
-);
+    alert(
+        "📖 ربط الكتب الحقيقية بالمصادر المسموح بها سيكون في المرحلة التالية."
+    );
 
 }
-
 
 function showLessons(){
 
-const result=
-document.getElementById("schoolResult");
+    const result =
+        document.getElementById("schoolResult");
 
+    result.innerHTML +=
 
-result.innerHTML+=
+        "<br><br>" +
 
-"<br><br>"+
+        "<div class='lessonCard'>" +
+        "📘 الفصل الأول" +
+        "<br>" +
+        "<button onclick='openLesson()'>" +
+        "فتح الدروس" +
+        "</button>" +
+        "</div>" +
 
-"<div class='lessonCard'>"+
-"📘 الفصل الأول"+
-"<br>"+
-"<button onclick='openLesson()'>"+
-"فتح الدروس"+
-"</button>"+
-"</div>"+
+        "<div class='lessonCard'>" +
+        "📗 الفصل الثاني" +
+        "<br>" +
+        "<button onclick='openLesson()'>" +
+        "فتح الدروس" +
+        "</button>" +
+        "</div>" +
 
-"<div class='lessonCard'>"+
-"📗 الفصل الثاني"+
-"<br>"+
-"<button onclick='openLesson()'>"+
-"فتح الدروس"+
-"</button>"+
-"</div>"+
-
-"<div class='lessonCard'>"+
-"📙 الفصل الثالث"+
-"<br>"+
-"<button onclick='openLesson()'>"+
-"فتح الدروس"+
-"</button>"+
-"</div>";
+        "<div class='lessonCard'>" +
+        "📙 الفصل الثالث" +
+        "<br>" +
+        "<button onclick='openLesson()'>" +
+        "فتح الدروس" +
+        "</button>" +
+        "</div>";
 
 }
-
 
 function openLesson(){
 
-alert(
-"📚 هنا ستظهر الدروس بعد ربط BV ببيانات الكتاب الحقيقية."
-);
+    alert(
+        "📚 ستظهر الدروس الحقيقية بعد إضافة بيانات المناهج."
+    );
 
 }
-
 
 function askBVAboutLesson(){
 
-openScreen("aiScreen");
+    openScreen("aiScreen");
 
+    const messages =
+        document.getElementById("messages");
 
-const messages=
-document.getElementById("messages");
+    const reply =
+        document.createElement("div");
 
+    reply.className =
+        "message bvMessage";
 
-const reply=
-document.createElement("div");
+    reply.textContent =
+        "🎓 اكتب سؤالك عن المنهج وسأساعدك في فهمه.";
 
-reply.className=
-"message bvMessage";
+    messages.appendChild(reply);
 
-reply.innerHTML=
-
-"🎓 أنت الآن تريد التعلم حسب منهجك الدراسي."+
-"<br><br>"+
-"عندما نربط قاعدة المناهج بالذكاء الاصطناعي، سأعرف الكتاب والفصل والدرس.";
-
-messages.appendChild(reply);
+    messages.scrollTop =
+        messages.scrollHeight;
 
 }
 
-
-
-/* مكتبتي */
+/* =========================
+   مكتبتي
+========================= */
 
 function searchBook(){
 
-const input=
-document.getElementById("bookSearch");
+    const input =
+        document.getElementById("bookSearch");
 
-const text=
-input.value.trim();
+    const text =
+        input.value.trim();
 
-const result=
-document.getElementById("bookResult");
+    const result =
+        document.getElementById("bookResult");
 
+    if(text === ""){
 
-if(text===""){
+        result.style.display =
+            "block";
 
-result.style.display="block";
+        result.innerHTML =
+            "⚠️ اكتب اسم الكتاب أولًا.";
 
-result.innerHTML=
-"⚠️ اكتب اسم الكتاب أولًا.";
+        return;
 
-return;
+    }
 
-}
+    result.style.display =
+        "block";
 
+    result.innerHTML =
 
-result.style.display="block";
+        "<b>📚 البحث عن:</b><br><br>" +
 
+        text +
 
-result.innerHTML=
+        "<br><br>" +
 
-"<b>📚 البحث عن:</b><br><br>"+
+        "📚 سيتم تطوير مكتبة BV وإضافة الكتب والمصادر المسموح بها." +
 
-text+
-
-"<br><br>"+
-
-"🔎 سيتم لاحقًا البحث في مكتبة BV والمكتبات الخارجية."+
-
-"<button onclick='openInternalBook()'>"+
-"📖 فتح من BV"+
-"</button>"+
-
-"<button onclick='openExternalSource()'>"+
-"🌐 البحث في المصادر الخارجية"+
-"</button>";
+        "<button onclick='openInternalBook()'>" +
+        "📖 فتح من BV" +
+        "</button>";
 
 }
-
 
 function openInternalBook(){
 
-alert(
-"📖 إذا كان الكتاب محفوظًا داخل BV فسيُفتح هنا."
-);
+    alert(
+        "📖 سيتم فتح الكتاب من مكتبة BV بعد إضافة الكتب."
+    );
 
 }
 
-
-function openExternalSource(){
-
-alert(
-"🌐 هنا سنربط BV بالمكتبات والمصادر الخارجية المسموح بها."
-);
-
-}
-
-
-
-/* المظهر */
+/* =========================
+   المظهر
+========================= */
 
 function changeTheme(color){
 
-document.body.style.background=color;
+    document.body.style.background =
+        color;
 
 }
 
 </script>
 
-
 </body>
-
-  </html>
+    </html>
