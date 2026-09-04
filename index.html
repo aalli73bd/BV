@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,7 +12,6 @@ content="BV - Books Vale منصة تعليمية للطلاب، تضم BV AI و�
 
 <meta name="theme-color" content="#02050d">
 
-<!-- أيقونة الموقع - سنضع الملف الحقيقي لاحقًا -->
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
@@ -33,7 +32,6 @@ body{
 
     color:white;
 
-    /* الخلفية الرئيسية */
     background:
         radial-gradient(
             circle at 50% 0%,
@@ -66,8 +64,6 @@ body{
     overflow-x:hidden;
 }
 
-/* توهج عام للخلفية */
-
 body::before{
 
     content:"";
@@ -98,6 +94,7 @@ button{
     cursor:pointer;
 }
 
+
 /* =========================
    الصفحة
 ========================= */
@@ -108,6 +105,7 @@ button{
     display:flex;
     flex-direction:column;
 }
+
 
 /* =========================
    الرأس
@@ -131,31 +129,27 @@ header{
         0 10px 40px rgba(0,0,0,.25);
 }
 
-.logo{
 
-    font-size:40px;
+/* شعار BV الحقيقي */
 
-    font-weight:bold;
+.siteLogo{
 
-    letter-spacing:2px;
+    width:min(420px,90vw);
 
-    background:
-        linear-gradient(
-            180deg,
-            #65a8ff,
-            #1664e8,
-            #07347e
+    max-height:150px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:auto;
+
+    filter:
+        drop-shadow(
+            0 0 25px rgba(20,100,255,.25)
         );
-
-    -webkit-background-clip:text;
-
-    background-clip:text;
-
-    color:transparent;
-
-    text-shadow:
-        0 0 25px rgba(20,100,255,.25);
 }
+
 
 .subtitle{
 
@@ -167,6 +161,7 @@ header{
 
     letter-spacing:3px;
 }
+
 
 /* =========================
    الرئيسية
@@ -223,6 +218,7 @@ header{
 
     gap:14px;
 }
+
 
 /* أزرار الرئيسية */
 
@@ -307,6 +303,7 @@ header{
     margin-bottom:8px;
 }
 
+
 /* =========================
    الفوتر
 ========================= */
@@ -322,6 +319,7 @@ footer{
     opacity:.45;
 }
 
+
 /* =========================
    الشاشات
 ========================= */
@@ -335,6 +333,7 @@ footer{
 
     flex-direction:column;
 }
+
 
 /* =========================
    الشريط العلوي
@@ -386,6 +385,7 @@ footer{
     font-weight:bold;
 }
 
+
 /* =========================
    المحتوى
 ========================= */
@@ -400,6 +400,7 @@ footer{
 
     padding:22px 18px;
 }
+
 
 /* =========================
    BV AI
@@ -599,6 +600,7 @@ footer{
         0 0 20px rgba(20,100,255,.25);
 }
 
+
 /* =========================
    مدرستي
 ========================= */
@@ -761,6 +763,7 @@ select:focus{
         rgba(70,140,255,.6);
 }
 
+
 /* =========================
    مكتبتي
 ========================= */
@@ -882,6 +885,7 @@ select:focus{
     font-weight:bold;
 }
 
+
 /* =========================
    الإعدادات
 ========================= */
@@ -908,53 +912,6 @@ select:focus{
         0 8px 25px rgba(0,0,0,.2);
 }
 
-.colorChoices{
-
-    display:flex;
-
-    gap:10px;
-
-    margin-top:12px;
-
-    flex-wrap:wrap;
-}
-
-.colorChoice{
-
-    width:45px;
-
-    height:45px;
-
-    border-radius:50%;
-
-    border:3px solid rgba(255,255,255,.8);
-
-    box-shadow:
-        0 0 15px rgba(0,0,0,.3);
-
-    transition:.2s;
-}
-
-.colorChoice:hover{
-
-    transform:scale(1.08);
-}
-
-.blue{
-    background:#073477;
-}
-
-.purple{
-    background:#24133f;
-}
-
-.green{
-    background:#123b32;
-}
-
-.black{
-    background:#050505;
-}
 
 /* =========================
    الدروس
@@ -1000,14 +957,16 @@ select:focus{
     font-weight:bold;
 }
 
+
 /* =========================
    الهواتف
 ========================= */
 
 @media(max-width:480px){
 
-    .logo{
-        font-size:36px;
+    .siteLogo{
+        width:min(360px,90vw);
+        max-height:130px;
     }
 
     .welcome h1{
@@ -1028,6 +987,7 @@ select:focus{
 
 }
 
+
 /* =========================
    حركة خفيفة
 ========================= */
@@ -1035,11 +995,13 @@ select:focus{
 @keyframes blueGlow{
 
     0%,100%{
+
         box-shadow:
             0 0 15px rgba(0,80,220,.08);
     }
 
     50%{
+
         box-shadow:
             0 0 25px rgba(0,100,255,.16);
     }
@@ -1051,6 +1013,7 @@ select:focus{
 
 <body>
 
+
 <!-- =========================
      الصفحة الرئيسية
 ========================= -->
@@ -1059,13 +1022,18 @@ select:focus{
 
 <header>
 
-<div class="logo">BV</div>
+<img
+    class="siteLogo"
+    src="logo.png"
+    alt="BV - Books Vale"
+>
 
 <div class="subtitle">
 Books Vale
 </div>
 
 </header>
+
 
 <main class="homeMain">
 
@@ -1081,10 +1049,14 @@ Books Vale
 
 </div>
 
+
 <div class="homeButtons">
 
-<button class="homeButton"
-onclick="openScreen('aiScreen')">
+
+<button
+    class="homeButton"
+    onclick="openScreen('aiScreen')"
+>
 
 <span class="homeIcon">🤖</span>
 
@@ -1092,8 +1064,11 @@ BV AI
 
 </button>
 
-<button class="homeButton"
-onclick="openScreen('schoolScreen')">
+
+<button
+    class="homeButton"
+    onclick="openScreen('schoolScreen')"
+>
 
 <span class="homeIcon">🎓</span>
 
@@ -1101,8 +1076,11 @@ onclick="openScreen('schoolScreen')">
 
 </button>
 
-<button class="homeButton"
-onclick="openScreen('libraryScreen')">
+
+<button
+    class="homeButton"
+    onclick="openScreen('libraryScreen')"
+>
 
 <span class="homeIcon">📚</span>
 
@@ -1110,8 +1088,11 @@ onclick="openScreen('libraryScreen')">
 
 </button>
 
-<button class="homeButton"
-onclick="openScreen('settingsScreen')">
+
+<button
+    class="homeButton"
+    onclick="openScreen('settingsScreen')"
+>
 
 <span class="homeIcon">⚙️</span>
 
@@ -1119,9 +1100,11 @@ onclick="openScreen('settingsScreen')">
 
 </button>
 
+
 </div>
 
 </main>
+
 
 <footer>
 BV • Books Vale
@@ -1136,10 +1119,13 @@ BV • Books Vale
 
 <div class="aiScreen" id="aiScreen">
 
+
 <div class="topBar">
 
-<button class="backButton"
-onclick="goHome()">
+<button
+    class="backButton"
+    onclick="goHome()"
+>
 →
 </button>
 
@@ -1148,6 +1134,7 @@ onclick="goHome()">
 </div>
 
 </div>
+
 
 <div class="messages" id="messages">
 
@@ -1167,26 +1154,33 @@ onclick="goHome()">
 
 </div>
 
+
 <div class="aiBottom">
 
-<button class="searchToggle"
-id="searchToggle"
-onclick="toggleSearch()">
+
+<button
+    class="searchToggle"
+    id="searchToggle"
+    onclick="toggleSearch()"
+>
 
 🔎 البحث
 
 </button>
 
+
 <div class="inputRow">
 
 <input
-id="aiInput"
-type="text"
-placeholder="اكتب سؤالك...">
+    id="aiInput"
+    type="text"
+    placeholder="اكتب سؤالك..."
+>
 
 <button
-class="sendButton"
-onclick="sendMessage()">
+    class="sendButton"
+    onclick="sendMessage()"
+>
 
 ➤
 
@@ -1205,10 +1199,13 @@ onclick="sendMessage()">
 
 <div class="screen" id="schoolScreen">
 
+
 <div class="topBar">
 
-<button class="backButton"
-onclick="goHome()">
+<button
+    class="backButton"
+    onclick="goHome()"
+>
 →
 </button>
 
@@ -1218,13 +1215,16 @@ onclick="goHome()">
 
 </div>
 
+
 <div class="content">
 
 <h2>
 اختر منهجك
 </h2>
 
+
 <div class="schoolCard">
+
 
 <label class="label">
 🌍 الدولة
@@ -1241,6 +1241,7 @@ onclick="goHome()">
 </option>
 
 </select>
+
 
 <label class="label">
 🎓 الصف
@@ -1270,6 +1271,7 @@ onclick="goHome()">
 
 </select>
 
+
 <label class="label">
 📚 المادة
 </label>
@@ -1298,8 +1300,11 @@ onclick="goHome()">
 
 </select>
 
-<button class="primaryButton"
-onclick="openCurriculum()">
+
+<button
+    class="primaryButton"
+    onclick="openCurriculum()"
+>
 
 فتح المنهج 🎓
 
@@ -1307,9 +1312,11 @@ onclick="openCurriculum()">
 
 </div>
 
+
 <div
-class="schoolResult"
-id="schoolResult">
+    class="schoolResult"
+    id="schoolResult"
+>
 </div>
 
 </div>
@@ -1323,10 +1330,13 @@ id="schoolResult">
 
 <div class="screen" id="libraryScreen">
 
+
 <div class="topBar">
 
-<button class="backButton"
-onclick="goHome()">
+<button
+    class="backButton"
+    onclick="goHome()"
+>
 →
 </button>
 
@@ -1336,27 +1346,32 @@ onclick="goHome()">
 
 </div>
 
+
 <div class="content">
 
 <h2>
 ابحث عن كتاب
 </h2>
 
+
 <div class="librarySearch">
 
 <input
-id="bookSearch"
-type="text"
-placeholder="اكتب اسم الكتاب...">
+    id="bookSearch"
+    type="text"
+    placeholder="اكتب اسم الكتاب..."
+>
 
 <button
-onclick="searchBook()">
+    onclick="searchBook()"
+>
 
 🔎
 
 </button>
 
 </div>
+
 
 <div class="libraryInfo">
 
@@ -1373,9 +1388,11 @@ onclick="searchBook()">
 
 </div>
 
+
 <div
-class="bookResult"
-id="bookResult">
+    class="bookResult"
+    id="bookResult"
+>
 </div>
 
 </div>
@@ -1389,10 +1406,13 @@ id="bookResult">
 
 <div class="screen" id="settingsScreen">
 
+
 <div class="topBar">
 
-<button class="backButton"
-onclick="goHome()">
+<button
+    class="backButton"
+    onclick="goHome()"
+>
 →
 </button>
 
@@ -1402,47 +1422,19 @@ onclick="goHome()">
 
 </div>
 
+
 <div class="content">
 
 <h2>
-تخصيص BV
+إعدادات BV
 </h2>
+
 
 <div class="settingItem">
 
 <b>
-🎨 لون الواجهة
-</b>
-
-<div class="colorChoices">
-
-<button
-class="colorChoice blue"
-onclick="changeTheme('#073477')">
-</button>
-
-<button
-class="colorChoice purple"
-onclick="changeTheme('#24133f')">
-</button>
-
-<button
-class="colorChoice green"
-onclick="changeTheme('#123b32')">
-</button>
-
-<button
-class="colorChoice black"
-onclick="changeTheme('#050505')">
-</button>
-
-</div>
-
-</div>
-
-<div class="settingItem">
-
 🌐 اللغة
+</b>
 
 <br><br>
 
@@ -1458,6 +1450,7 @@ English
 
 </div>
 
+
 <div class="settingItem">
 
 🔊 الصوت
@@ -1468,12 +1461,14 @@ English
 
 </div>
 
+
 </div>
 
 </div>
 
 
 <script>
+
 
 /* =========================
    التنقل
@@ -1493,6 +1488,7 @@ function hideAll(){
 
 }
 
+
 function openScreen(id){
 
     hideAll();
@@ -1507,6 +1503,7 @@ function openScreen(id){
     }
 
 }
+
 
 function goHome(){
 
@@ -1523,12 +1520,14 @@ function goHome(){
 
 let searchEnabled = false;
 
+
 function toggleSearch(){
 
     searchEnabled = !searchEnabled;
 
     const button =
         document.getElementById("searchToggle");
+
 
     if(searchEnabled){
 
@@ -1570,6 +1569,7 @@ async function sendMessage(){
         return;
 
     }
+
 
     const messages =
         document.getElementById("messages");
@@ -1652,6 +1652,27 @@ async function sendMessage(){
     });
 
 
+    /* =========================
+       أخذ الصف والمادة
+    ========================= */
+
+    const gradeElement =
+        document.getElementById("grade");
+
+    const subjectElement =
+        document.getElementById("subject");
+
+    const grade =
+        gradeElement
+        ? gradeElement.value
+        : "";
+
+    const subject =
+        subjectElement
+        ? subjectElement.value
+        : "";
+
+
     try{
 
         const response =
@@ -1679,9 +1700,12 @@ async function sendMessage(){
 
                         mode:"study",
 
-                        subject:"",
+                        subject:subject,
 
-                        level:""
+                        level:grade,
+
+                        searchEnabled:
+                            searchEnabled
 
                     })
 
@@ -2062,26 +2086,6 @@ function openInternalBook(){
 
     alert(
         "📖 سيتم فتح الكتاب من مكتبة BV بعد إضافة الكتب."
-    );
-
-}
-
-
-/* =========================
-   المظهر
-========================= */
-
-function changeTheme(color){
-
-    /*
-       نحافظ على الخلفية السوداء
-       والأزرق الداكن، ونغير لون
-       الإضاءة فقط.
-    */
-
-    document.documentElement.style.setProperty(
-        "--theme-color",
-        color
     );
 
 }
