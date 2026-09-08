@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BV - Books Vale</title>
@@ -12,1028 +14,1096 @@ content="BV - Books Vale منصة تعليمية للطلاب، تضم BV AI و�
 
 <meta name="theme-color" content="#02050d">
 
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png"
+href="0c76aec73514d01d193fc74527f8c537ba83858f0b0da7f41da8c824914fa1a9.png">
 
 <style>
 
 *{
-    box-sizing:border-box;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    margin:0;
-    min-height:100vh;
+margin:0;
+min-height:100vh;
 
-    font-family:Arial,sans-serif;
+font-family:Arial,sans-serif;
 
-    color:white;
+color:white;
 
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(0, 70, 180, 0.35) 0%,
-            rgba(0, 25, 65, 0.18) 28%,
-            transparent 65%
-        ),
+/* الخلفية الرئيسية */
 
-        radial-gradient(
-            circle at 0% 100%,
-            rgba(0, 50, 140, 0.22) 0%,
-            transparent 50%
-        ),
+background:
 
-        radial-gradient(
-            circle at 100% 50%,
-            rgba(0, 80, 200, 0.15) 0%,
-            transparent 45%
-        ),
+radial-gradient(
+circle at 50% 0%,
+rgba(0,70,180,0.35) 0%,
+rgba(0,25,65,0.18) 28%,
+transparent 65%
+),
 
-        linear-gradient(
-            135deg,
-            #010208 0%,
-            #030816 45%,
-            #02040a 100%
-        );
+radial-gradient(
+circle at 0% 100%,
+rgba(0,50,140,0.22) 0%,
+transparent 50%
+),
 
-    background-attachment:fixed;
+radial-gradient(
+circle at 100% 50%,
+rgba(0,80,200,0.15) 0%,
+transparent 45%
+),
 
-    overflow-x:hidden;
+linear-gradient(
+135deg,
+#010208 0%,
+#030816 45%,
+#02040a 100%
+);
+
+background-attachment:fixed;
+
+overflow-x:hidden;
+
 }
+
+/* توهج عام للخلفية */
 
 body::before{
 
-    content:"";
+content:"";
 
-    position:fixed;
+position:fixed;
 
-    inset:0;
+inset:0;
 
-    pointer-events:none;
+pointer-events:none;
 
-    background:
-        radial-gradient(
-            circle at 50% 30%,
-            rgba(20,100,255,.08),
-            transparent 45%
-        );
+background:
 
-    z-index:-1;
+radial-gradient(
+circle at 50% 30%,
+rgba(20,100,255,.08),
+transparent 45%
+);
+
+z-index:-1;
+
 }
 
 button,
 input,
 select{
-    font-family:inherit;
+font-family:inherit;
 }
 
 button{
-    cursor:pointer;
+cursor:pointer;
 }
 
-
 /* =========================
-   الصفحة
+الصفحة
 ========================= */
 
 .page{
-    min-height:100vh;
 
-    display:flex;
-    flex-direction:column;
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
 }
 
-
 /* =========================
-   الرأس
+الرأس
 ========================= */
 
 header{
 
-    padding:24px 20px;
+padding:24px 20px;
 
-    text-align:center;
+text-align:center;
 
-    border-bottom:
-        1px solid rgba(70,130,255,.18);
+border-bottom:
+1px solid rgba(70,130,255,.18);
 
-    background:
-        rgba(0,5,15,.35);
+background:
+rgba(0,5,15,.35);
 
-    backdrop-filter:blur(12px);
+backdrop-filter:blur(12px);
 
-    box-shadow:
-        0 10px 40px rgba(0,0,0,.25);
+box-shadow:
+0 10px 40px rgba(0,0,0,.25);
+
 }
 
+.logo{
 
-/* شعار BV الحقيقي */
+font-size:40px;
 
-.siteLogo{
+font-weight:bold;
 
-    width:min(420px,90vw);
+letter-spacing:2px;
 
-    max-height:150px;
+background:
 
-    object-fit:contain;
+linear-gradient(
+180deg,
+#65a8ff,
+#1664e8,
+#07347e
+);
 
-    display:block;
+-webkit-background-clip:text;
 
-    margin:auto;
+background-clip:text;
 
-    filter:
-        drop-shadow(
-            0 0 25px rgba(20,100,255,.25)
-        );
+color:transparent;
+
+text-shadow:
+0 0 25px rgba(20,100,255,.25);
+
 }
-
 
 .subtitle{
 
-    font-size:13px;
+font-size:13px;
 
-    opacity:.65;
+opacity:.65;
 
-    margin-top:5px;
+margin-top:5px;
 
-    letter-spacing:3px;
+letter-spacing:3px;
+
 }
 
-
 /* =========================
-   الرئيسية
+الرئيسية
 ========================= */
 
 .homeMain{
 
-    flex:1;
+flex:1;
 
-    padding:25px 18px;
+padding:25px 18px;
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
+flex-direction:column;
 
-    justify-content:center;
+justify-content:center;
+
 }
 
 .welcome{
 
-    text-align:center;
+text-align:center;
 
-    margin-bottom:30px;
+margin-bottom:30px;
+
 }
 
 .welcome h1{
 
-    font-size:27px;
+font-size:27px;
 
-    margin-bottom:10px;
+margin-bottom:10px;
 
-    text-shadow:
-        0 0 20px rgba(30,110,255,.15);
+text-shadow:
+0 0 20px rgba(30,110,255,.15);
+
 }
 
 .welcome p{
 
-    opacity:.75;
+opacity:.75;
 
-    line-height:1.8;
+line-height:1.8;
+
 }
 
 .homeButtons{
 
-    width:100%;
+width:100%;
 
-    max-width:520px;
+max-width:520px;
 
-    margin:auto;
+margin:auto;
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:1fr 1fr;
+grid-template-columns:1fr 1fr;
 
-    gap:14px;
+gap:14px;
+
 }
-
 
 /* أزرار الرئيسية */
 
 .homeButton{
 
-    position:relative;
+position:relative;
 
-    overflow:hidden;
+overflow:hidden;
 
-    border:
-        1px solid rgba(70,130,255,.25);
+border:
+1px solid rgba(70,130,255,.25);
 
-    border-radius:18px;
+border-radius:18px;
 
-    padding:23px 10px;
+padding:23px 10px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(12,32,70,.88),
-            rgba(3,10,25,.9)
-        );
+background:
 
-    color:white;
+linear-gradient(
+145deg,
+rgba(12,32,70,.88),
+rgba(3,10,25,.9)
+);
 
-    font-size:16px;
+color:white;
 
-    font-weight:bold;
+font-size:16px;
 
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.35),
-        0 0 20px rgba(0,70,200,.08);
+font-weight:bold;
 
-    backdrop-filter:blur(12px);
+box-shadow:
 
-    transition:.25s ease;
+0 10px 30px rgba(0,0,0,.35),
+
+0 0 20px rgba(0,70,200,.08);
+
+backdrop-filter:blur(12px);
+
+transition:.25s ease;
+
 }
 
 .homeButton::before{
 
-    content:"";
+content:"";
 
-    position:absolute;
+position:absolute;
 
-    inset:0;
+inset:0;
 
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(50,130,255,.16),
-            transparent 65%
-        );
+background:
 
-    pointer-events:none;
+radial-gradient(
+circle at 50% 0%,
+rgba(50,130,255,.16),
+transparent 65%
+);
+
+pointer-events:none;
+
 }
 
 .homeButton:hover{
 
-    transform:translateY(-3px);
+transform:translateY(-3px);
 
-    border-color:
-        rgba(60,140,255,.65);
+border-color:
+rgba(60,140,255,.65);
 
-    box-shadow:
-        0 14px 35px rgba(0,0,0,.45),
-        0 0 25px rgba(0,90,255,.2);
+box-shadow:
+
+0 14px 35px rgba(0,0,0,.45),
+
+0 0 25px rgba(0,90,255,.2);
+
 }
 
 .homeButton:active{
 
-    transform:scale(.97);
+transform:scale(.97);
+
 }
 
 .homeIcon{
 
-    position:relative;
+position:relative;
 
-    display:block;
+display:block;
 
-    font-size:31px;
+font-size:31px;
 
-    margin-bottom:8px;
+margin-bottom:8px;
+
 }
 
-
 /* =========================
-   الفوتر
+الفوتر
 ========================= */
 
 footer{
 
-    text-align:center;
+text-align:center;
 
-    padding:15px;
+padding:15px;
 
-    font-size:12px;
+font-size:12px;
 
-    opacity:.45;
+opacity:.45;
+
 }
 
-
 /* =========================
-   الشاشات
+الشاشات
 ========================= */
 
 .screen,
 .aiScreen{
 
-    display:none;
+display:none;
 
-    min-height:100vh;
+min-height:100vh;
 
-    flex-direction:column;
+flex-direction:column;
+
 }
 
-
 /* =========================
-   الشريط العلوي
+الشريط العلوي
 ========================= */
 
 .topBar{
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    padding:17px;
+padding:17px;
 
-    border-bottom:
-        1px solid rgba(70,130,255,.18);
+border-bottom:
+1px solid rgba(70,130,255,.18);
 
-    background:
-        rgba(0,5,15,.35);
+background:
+rgba(0,5,15,.35);
 
-    backdrop-filter:blur(12px);
+backdrop-filter:blur(12px);
+
 }
 
 .backButton{
 
-    border:none;
+border:none;
 
-    background:transparent;
+background:transparent;
 
-    color:white;
+color:white;
 
-    font-size:27px;
+font-size:27px;
 
-    margin-left:12px;
+margin-left:12px;
 
-    transition:.2s;
+transition:.2s;
+
 }
 
 .backButton:hover{
 
-    color:#4d91ff;
+color:#4d91ff;
 
-    transform:translateX(3px);
+transform:translateX(3px);
+
 }
 
 .screenTitle{
 
-    font-size:22px;
+font-size:22px;
 
-    font-weight:bold;
+font-weight:bold;
+
 }
 
-
 /* =========================
-   المحتوى
+المحتوى
 ========================= */
 
 .content{
 
-    width:100%;
+width:100%;
 
-    max-width:600px;
+max-width:600px;
 
-    margin:auto;
+margin:auto;
 
-    padding:22px 18px;
+padding:22px 18px;
+
 }
 
-
 /* =========================
-   BV AI
+BV AI
 ========================= */
 
 .messages{
 
-    flex:1;
+flex:1;
 
-    overflow-y:auto;
+overflow-y:auto;
 
-    padding:20px;
+padding:20px;
 
-    scrollbar-width:thin;
+scrollbar-width:thin;
 
-    scrollbar-color:
-        rgba(50,120,255,.5)
-        transparent;
+scrollbar-color:
+rgba(50,120,255,.5)
+transparent;
+
 }
 
 .message{
 
-    max-width:95%;
+max-width:95%;
 
-    padding:13px 16px;
+padding:13px 16px;
 
-    border-radius:17px;
+border-radius:17px;
 
-    margin-bottom:12px;
+margin-bottom:12px;
 
-    line-height:1.8;
+line-height:1.8;
 
-    overflow-wrap:anywhere;
+overflow-wrap:anywhere;
 
-    word-break:break-word;
+word-break:break-word;
 
-    white-space:pre-wrap;
+white-space:pre-wrap;
 
-    border:
-        1px solid rgba(70,130,255,.14);
+border:
+1px solid rgba(70,130,255,.14);
 
-    box-shadow:
-        0 7px 25px rgba(0,0,0,.25);
+box-shadow:
+0 7px 25px rgba(0,0,0,.25);
+
 }
 
 .bvMessage{
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(15,38,80,.72),
-            rgba(4,12,28,.78)
-        );
+background:
 
-    margin-left:auto;
+linear-gradient(
+145deg,
+rgba(15,38,80,.72),
+rgba(4,12,28,.78)
+);
 
-    backdrop-filter:blur(10px);
+margin-left:auto;
+
+backdrop-filter:blur(10px);
+
 }
 
 .userMessage{
 
-    background:
-        linear-gradient(
-            145deg,
-            #1764d9,
-            #073477
-        );
+background:
 
-    color:white;
+linear-gradient(
+145deg,
+#1764d9,
+#073477
+);
 
-    margin-right:auto;
+color:white;
 
-    border:
-        1px solid rgba(100,170,255,.35);
+margin-right:auto;
+
+border:
+1px solid rgba(100,170,255,.35);
+
 }
 
 .aiBottom{
 
-    padding:12px;
+padding:12px;
 
-    border-top:
-        1px solid rgba(70,130,255,.18);
+border-top:
+1px solid rgba(70,130,255,.18);
 
-    background:
-        rgba(0,5,15,.45);
+background:
+rgba(0,5,15,.45);
 
-    backdrop-filter:blur(14px);
+backdrop-filter:blur(14px);
+
 }
 
 .searchToggle{
 
-    border:
-        1px solid rgba(70,130,255,.35);
+border:
+1px solid rgba(70,130,255,.35);
 
-    background:
-        rgba(5,20,45,.7);
+background:
+rgba(5,20,45,.7);
 
-    color:white;
+color:white;
 
-    border-radius:12px;
+border-radius:12px;
 
-    padding:8px 13px;
+padding:8px 13px;
 
-    margin-bottom:8px;
+margin-bottom:8px;
 
-    transition:.2s;
+transition:.2s;
+
 }
 
 .searchToggle.active{
 
-    background:
-        linear-gradient(
-            135deg,
-            #1764d9,
-            #073477
-        );
+background:
 
-    color:white;
+linear-gradient(
+135deg,
+#1764d9,
+#073477
+);
 
-    border-color:
-        rgba(100,170,255,.55);
+color:white;
+
+border-color:
+rgba(100,170,255,.55);
+
 }
 
 .inputRow{
 
-    display:flex;
+display:flex;
 
-    gap:8px;
+gap:8px;
+
 }
 
 .inputRow input{
 
-    flex:1;
+flex:1;
 
-    border:
-        1px solid rgba(70,130,255,.25);
+border:
+1px solid rgba(70,130,255,.25);
 
-    outline:none;
+outline:none;
 
-    border-radius:15px;
+border-radius:15px;
 
-    padding:15px;
+padding:15px;
 
-    font-size:15px;
+font-size:15px;
 
-    background:
-        rgba(5,15,35,.8);
+background:
+rgba(5,15,35,.8);
 
-    color:white;
+color:white;
 
-    box-shadow:
-        inset 0 0 15px rgba(0,0,0,.2);
+box-shadow:
+inset 0 0 15px rgba(0,0,0,.2);
+
 }
 
 .inputRow input::placeholder{
 
-    color:rgba(255,255,255,.45);
+color:rgba(255,255,255,.45);
+
 }
 
 .inputRow input:focus{
 
-    border-color:
-        rgba(60,140,255,.7);
+border-color:
+rgba(60,140,255,.7);
 
-    box-shadow:
-        0 0 18px rgba(0,90,255,.12);
+box-shadow:
+0 0 18px rgba(0,90,255,.12);
+
 }
 
 .sendButton{
 
-    width:55px;
+width:55px;
 
-    border:
-        1px solid rgba(100,170,255,.4);
+border:
+1px solid rgba(100,170,255,.4);
 
-    border-radius:15px;
+border-radius:15px;
 
-    background:
-        linear-gradient(
-            145deg,
-            #2272ed,
-            #063477
-        );
+background:
 
-    color:white;
+linear-gradient(
+145deg,
+#2272ed,
+#063477
+);
 
-    font-size:20px;
+color:white;
 
-    transition:.2s;
+font-size:20px;
+
+transition:.2s;
+
 }
 
 .sendButton:hover{
 
-    transform:translateY(-2px);
+transform:translateY(-2px);
 
-    box-shadow:
-        0 0 20px rgba(20,100,255,.25);
+box-shadow:
+0 0 20px rgba(20,100,255,.25);
+
 }
 
-
 /* =========================
-   مدرستي
+مدرستي
 ========================= */
 
 .schoolCard{
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(15,38,80,.62),
-            rgba(3,10,25,.7)
-        );
+background:
 
-    padding:18px;
+linear-gradient(
+145deg,
+rgba(15,38,80,.62),
+rgba(3,10,25,.7)
+);
 
-    border:
-        1px solid rgba(70,130,255,.2);
+padding:18px;
 
-    border-radius:18px;
+border:
+1px solid rgba(70,130,255,.2);
 
-    margin-bottom:18px;
+border-radius:18px;
 
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.3);
+margin-bottom:18px;
 
-    backdrop-filter:blur(12px);
+box-shadow:
+0 10px 30px rgba(0,0,0,.3);
+
+backdrop-filter:blur(12px);
+
 }
 
 .label{
 
-    display:block;
+display:block;
 
-    margin-top:16px;
+margin-top:16px;
 
-    margin-bottom:8px;
+margin-bottom:8px;
+
 }
 
 select{
 
-    width:100%;
+width:100%;
 
-    padding:14px;
+padding:14px;
 
-    border:
-        1px solid rgba(70,130,255,.2);
+border:
+1px solid rgba(70,130,255,.2);
 
-    border-radius:13px;
+border-radius:13px;
 
-    font-size:15px;
+font-size:15px;
 
-    background:
-        #071426;
+background:
+#071426;
 
-    color:white;
+color:white;
 
-    outline:none;
+outline:none;
+
 }
 
 select:focus{
 
-    border-color:
-        rgba(60,140,255,.7);
+border-color:
+rgba(60,140,255,.7);
+
 }
 
 .primaryButton{
 
-    width:100%;
+width:100%;
 
-    margin-top:18px;
+margin-top:18px;
 
-    padding:15px;
+padding:15px;
 
-    border:
-        1px solid rgba(100,170,255,.35);
+border:
+1px solid rgba(100,170,255,.35);
 
-    border-radius:14px;
+border-radius:14px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1764d9,
-            #073477
-        );
+background:
 
-    color:white;
+linear-gradient(
+135deg,
+#1764d9,
+#073477
+);
 
-    font-size:16px;
+color:white;
 
-    font-weight:bold;
+font-size:16px;
 
-    box-shadow:
-        0 8px 25px rgba(0,50,150,.25);
+font-weight:bold;
 
-    transition:.2s;
+box-shadow:
+0 8px 25px rgba(0,50,150,.25);
+
+transition:.2s;
+
 }
 
 .primaryButton:hover{
 
-    transform:translateY(-2px);
+transform:translateY(-2px);
 
-    box-shadow:
-        0 0 25px rgba(0,90,255,.25);
+box-shadow:
+0 0 25px rgba(0,90,255,.25);
+
 }
 
 .schoolResult{
 
-    display:none;
+display:none;
 
-    margin-top:18px;
+margin-top:18px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(15,38,80,.55),
-            rgba(3,10,25,.65)
-        );
+background:
 
-    border:
-        1px solid rgba(70,130,255,.18);
+linear-gradient(
+145deg,
+rgba(15,38,80,.55),
+rgba(3,10,25,.65)
+);
 
-    border-radius:16px;
+border:
+1px solid rgba(70,130,255,.18);
 
-    padding:17px;
+border-radius:16px;
 
-    line-height:1.9;
+padding:17px;
 
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.25);
+line-height:1.9;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.25);
+
 }
 
 .lessonButton{
 
-    width:100%;
+width:100%;
 
-    border:
-        1px solid rgba(70,130,255,.25);
+border:
+1px solid rgba(70,130,255,.25);
 
-    padding:14px;
+padding:14px;
 
-    margin-top:9px;
+margin-top:9px;
 
-    border-radius:13px;
+border-radius:13px;
 
-    background:
-        rgba(10,30,65,.8);
+background:
+rgba(10,30,65,.8);
 
-    color:white;
+color:white;
 
-    font-weight:bold;
+font-weight:bold;
 
-    transition:.2s;
+transition:.2s;
+
 }
 
 .lessonButton:hover{
 
-    background:
-        rgba(20,60,125,.9);
+background:
+rgba(20,60,125,.9);
 
-    border-color:
-        rgba(70,140,255,.6);
+border-color:
+rgba(70,140,255,.6);
+
 }
 
-
 /* =========================
-   مكتبتي
+مكتبتي
 ========================= */
 
 .librarySearch{
 
-    display:flex;
+display:flex;
 
-    gap:8px;
+gap:8px;
 
-    margin-bottom:20px;
+margin-bottom:20px;
+
 }
 
 .librarySearch input{
 
-    flex:1;
+flex:1;
 
-    border:
-        1px solid rgba(70,130,255,.25);
+border:
+1px solid rgba(70,130,255,.25);
 
-    outline:none;
+outline:none;
 
-    border-radius:14px;
+border-radius:14px;
 
-    padding:15px;
+padding:15px;
 
-    font-size:15px;
+font-size:15px;
 
-    background:
-        rgba(5,15,35,.8);
+background:
+rgba(5,15,35,.8);
 
-    color:white;
+color:white;
+
 }
 
 .librarySearch input::placeholder{
 
-    color:rgba(255,255,255,.45);
+color:rgba(255,255,255,.45);
+
 }
 
 .librarySearch button{
 
-    width:55px;
+width:55px;
 
-    border:
-        1px solid rgba(100,170,255,.35);
+border:
+1px solid rgba(100,170,255,.35);
 
-    border-radius:14px;
+border-radius:14px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1764d9,
-            #073477
-        );
+background:
 
-    color:white;
+linear-gradient(
+135deg,
+#1764d9,
+#073477
+);
 
-    font-size:19px;
+color:white;
+
+font-size:19px;
+
 }
 
 .libraryInfo{
 
-    padding:16px;
+padding:16px;
 
-    border-radius:16px;
+border-radius:16px;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(15,38,80,.55),
-            rgba(3,10,25,.65)
-        );
+background:
 
-    border:
-        1px solid rgba(70,130,255,.18);
+linear-gradient(
+145deg,
+rgba(15,38,80,.55),
+rgba(3,10,25,.65)
+);
 
-    line-height:1.8;
+border:
+1px solid rgba(70,130,255,.18);
+
+line-height:1.8;
+
 }
 
 .bookResult{
 
-    display:none;
+display:none;
 
-    margin-top:15px;
+margin-top:15px;
 
-    padding:17px;
+padding:17px;
 
-    border-radius:16px;
+border-radius:16px;
 
-    background:
-        rgba(10,30,65,.65);
+background:
+rgba(10,30,65,.65);
 
-    border:
-        1px solid rgba(70,130,255,.18);
+border:
+1px solid rgba(70,130,255,.18);
+
 }
 
 .bookResult button{
 
-    width:100%;
+width:100%;
 
-    margin-top:10px;
+margin-top:10px;
 
-    padding:13px;
+padding:13px;
 
-    border:
-        1px solid rgba(70,130,255,.25);
+border:
+1px solid rgba(70,130,255,.25);
 
-    border-radius:12px;
+border-radius:12px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1764d9,
-            #073477
-        );
+background:
 
-    color:white;
+linear-gradient(
+135deg,
+#1764d9,
+#073477
+);
 
-    font-weight:bold;
+color:white;
+
+font-weight:bold;
+
 }
 
-
 /* =========================
-   الإعدادات
+الإعدادات
 ========================= */
 
 .settingItem{
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(15,38,80,.55),
-            rgba(3,10,25,.65)
-        );
+background:
 
-    padding:17px;
+linear-gradient(
+145deg,
+rgba(15,38,80,.55),
+rgba(3,10,25,.65)
+);
 
-    border:
-        1px solid rgba(70,130,255,.18);
+padding:17px;
 
-    border-radius:16px;
+border:
+1px solid rgba(70,130,255,.18);
 
-    margin-bottom:12px;
+border-radius:16px;
 
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.2);
+margin-bottom:12px;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.2);
+
 }
 
-
 /* =========================
-   الدروس
+الدروس
 ========================= */
 
 .lessonCard{
 
-    padding:16px;
+padding:16px;
 
-    background:
-        rgba(8,25,55,.7);
+background:
+rgba(8,25,55,.7);
 
-    border:
-        1px solid rgba(70,130,255,.18);
+border:
+1px solid rgba(70,130,255,.18);
 
-    border-radius:15px;
+border-radius:15px;
 
-    margin-bottom:10px;
+margin-bottom:10px;
+
 }
 
 .lessonCard button{
 
-    margin-top:10px;
+margin-top:10px;
 
-    width:100%;
+width:100%;
 
-    padding:12px;
+padding:12px;
 
-    border:
-        1px solid rgba(70,130,255,.25);
+border:
+1px solid rgba(70,130,255,.25);
 
-    border-radius:11px;
+border-radius:11px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #1764d9,
-            #073477
-        );
+background:
 
-    color:white;
+linear-gradient(
+135deg,
+#1764d9,
+#073477
+);
 
-    font-weight:bold;
+color:white;
+
+font-weight:bold;
+
 }
 
-
 /* =========================
-   الهواتف
+الهواتف
 ========================= */
 
 @media(max-width:480px){
 
-    .siteLogo{
-        width:min(360px,90vw);
-        max-height:130px;
-    }
+.logo{
+font-size:36px;
+}
 
-    .welcome h1{
-        font-size:24px;
-    }
+.welcome h1{
+font-size:24px;
+}
 
-    .homeButtons{
-        gap:11px;
-    }
+.homeButtons{
+gap:11px;
+}
 
-    .homeButton{
-        padding:20px 8px;
-    }
+.homeButton{
+padding:20px 8px;
+}
 
-    .message{
-        max-width:96%;
-    }
+.message{
+max-width:96%;
+}
 
 }
 
-
 /* =========================
-   حركة خفيفة
+حركة خفيفة
 ========================= */
 
 @keyframes blueGlow{
 
-    0%,100%{
+0%,100%{
 
-        box-shadow:
-            0 0 15px rgba(0,80,220,.08);
-    }
+box-shadow:
+0 0 15px rgba(0,80,220,.08);
 
-    50%{
+}
 
-        box-shadow:
-            0 0 25px rgba(0,100,255,.16);
-    }
+50%{
+
+box-shadow:
+0 0 25px rgba(0,100,255,.16);
+
+}
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-
 <!-- =========================
-     الصفحة الرئيسية
+الصفحة الرئيسية
 ========================= -->
 
 <div class="page" id="homePage">
 
 <header>
 
-<img
-    class="siteLogo"
-    src="logo.png"
-    alt="BV - Books Vale"
->
+<div class="logo">BV</div>
 
 <div class="subtitle">
 Books Vale
 </div>
 
 </header>
-
 
 <main class="homeMain">
 
@@ -1049,14 +1119,11 @@ Books Vale
 
 </div>
 
-
 <div class="homeButtons">
 
-
 <button
-    class="homeButton"
-    onclick="openScreen('aiScreen')"
->
+class="homeButton"
+onclick="openScreen('aiScreen')">
 
 <span class="homeIcon">🤖</span>
 
@@ -1066,9 +1133,8 @@ BV AI
 
 
 <button
-    class="homeButton"
-    onclick="openScreen('schoolScreen')"
->
+class="homeButton"
+onclick="openScreen('schoolScreen')">
 
 <span class="homeIcon">🎓</span>
 
@@ -1078,9 +1144,8 @@ BV AI
 
 
 <button
-    class="homeButton"
-    onclick="openScreen('libraryScreen')"
->
+class="homeButton"
+onclick="openScreen('libraryScreen')">
 
 <span class="homeIcon">📚</span>
 
@@ -1090,9 +1155,8 @@ BV AI
 
 
 <button
-    class="homeButton"
-    onclick="openScreen('settingsScreen')"
->
+class="homeButton"
+onclick="openScreen('settingsScreen')">
 
 <span class="homeIcon">⚙️</span>
 
@@ -1100,11 +1164,9 @@ BV AI
 
 </button>
 
-
 </div>
 
 </main>
-
 
 <footer>
 BV • Books Vale
@@ -1114,19 +1176,19 @@ BV • Books Vale
 
 
 <!-- =========================
-     BV AI
+BV AI
 ========================= -->
 
 <div class="aiScreen" id="aiScreen">
 
-
 <div class="topBar">
 
 <button
-    class="backButton"
-    onclick="goHome()"
->
+class="backButton"
+onclick="goHome()">
+
 →
+
 </button>
 
 <div class="screenTitle">
@@ -1157,12 +1219,10 @@ BV • Books Vale
 
 <div class="aiBottom">
 
-
 <button
-    class="searchToggle"
-    id="searchToggle"
-    onclick="toggleSearch()"
->
+class="searchToggle"
+id="searchToggle"
+onclick="toggleSearch()">
 
 🔎 البحث
 
@@ -1172,15 +1232,13 @@ BV • Books Vale
 <div class="inputRow">
 
 <input
-    id="aiInput"
-    type="text"
-    placeholder="اكتب سؤالك..."
->
+id="aiInput"
+type="text"
+placeholder="اكتب سؤالك...">
 
 <button
-    class="sendButton"
-    onclick="sendMessage()"
->
+class="sendButton"
+onclick="sendMessage()">
 
 ➤
 
@@ -1194,19 +1252,19 @@ BV • Books Vale
 
 
 <!-- =========================
-     مدرستي
+مدرستي
 ========================= -->
 
 <div class="screen" id="schoolScreen">
 
-
 <div class="topBar">
 
 <button
-    class="backButton"
-    onclick="goHome()"
->
+class="backButton"
+onclick="goHome()">
+
 →
+
 </button>
 
 <div class="screenTitle">
@@ -1224,7 +1282,6 @@ BV • Books Vale
 
 
 <div class="schoolCard">
-
 
 <label class="label">
 🌍 الدولة
@@ -1302,9 +1359,8 @@ BV • Books Vale
 
 
 <button
-    class="primaryButton"
-    onclick="openCurriculum()"
->
+class="primaryButton"
+onclick="openCurriculum()">
 
 فتح المنهج 🎓
 
@@ -1314,9 +1370,9 @@ BV • Books Vale
 
 
 <div
-    class="schoolResult"
-    id="schoolResult"
->
+class="schoolResult"
+id="schoolResult">
+
 </div>
 
 </div>
@@ -1325,19 +1381,19 @@ BV • Books Vale
 
 
 <!-- =========================
-     مكتبتي
+مكتبتي
 ========================= -->
 
 <div class="screen" id="libraryScreen">
 
-
 <div class="topBar">
 
 <button
-    class="backButton"
-    onclick="goHome()"
->
+class="backButton"
+onclick="goHome()">
+
 →
+
 </button>
 
 <div class="screenTitle">
@@ -1357,14 +1413,11 @@ BV • Books Vale
 <div class="librarySearch">
 
 <input
-    id="bookSearch"
-    type="text"
-    placeholder="اكتب اسم الكتاب..."
->
+id="bookSearch"
+type="text"
+placeholder="اكتب اسم الكتاب...">
 
-<button
-    onclick="searchBook()"
->
+<button onclick="searchBook()">
 
 🔎
 
@@ -1390,9 +1443,9 @@ BV • Books Vale
 
 
 <div
-    class="bookResult"
-    id="bookResult"
->
+class="bookResult"
+id="bookResult">
+
 </div>
 
 </div>
@@ -1401,19 +1454,19 @@ BV • Books Vale
 
 
 <!-- =========================
-     الإعدادات
+الإعدادات
 ========================= -->
 
 <div class="screen" id="settingsScreen">
 
-
 <div class="topBar">
 
 <button
-    class="backButton"
-    onclick="goHome()"
->
+class="backButton"
+onclick="goHome()">
+
 →
+
 </button>
 
 <div class="screenTitle">
@@ -1426,15 +1479,13 @@ BV • Books Vale
 <div class="content">
 
 <h2>
-إعدادات BV
+تخصيص BV
 </h2>
 
 
 <div class="settingItem">
 
-<b>
 🌐 اللغة
-</b>
 
 <br><br>
 
@@ -1461,7 +1512,6 @@ English
 
 </div>
 
-
 </div>
 
 </div>
@@ -1469,53 +1519,52 @@ English
 
 <script>
 
-
 /* =========================
-   التنقل
+التنقل
 ========================= */
 
 function hideAll(){
 
-    document.getElementById("homePage").style.display = "none";
+document.getElementById("homePage").style.display = "none";
 
-    document.getElementById("aiScreen").style.display = "none";
+document.getElementById("aiScreen").style.display = "none";
 
-    document.getElementById("schoolScreen").style.display = "none";
+document.getElementById("schoolScreen").style.display = "none";
 
-    document.getElementById("libraryScreen").style.display = "none";
+document.getElementById("libraryScreen").style.display = "none";
 
-    document.getElementById("settingsScreen").style.display = "none";
+document.getElementById("settingsScreen").style.display = "none";
 
 }
 
 
 function openScreen(id){
 
-    hideAll();
+hideAll();
 
-    const screen =
-        document.getElementById(id);
+const screen =
+document.getElementById(id);
 
-    if(screen){
+if(screen){
 
-        screen.style.display = "flex";
+screen.style.display = "flex";
 
-    }
+}
 
 }
 
 
 function goHome(){
 
-    hideAll();
+hideAll();
 
-    document.getElementById("homePage").style.display = "flex";
+document.getElementById("homePage").style.display = "flex";
 
 }
 
 
 /* =========================
-   البحث
+البحث
 ========================= */
 
 let searchEnabled = false;
@@ -1523,574 +1572,552 @@ let searchEnabled = false;
 
 function toggleSearch(){
 
-    searchEnabled = !searchEnabled;
+searchEnabled = !searchEnabled;
 
-    const button =
-        document.getElementById("searchToggle");
+const button =
+document.getElementById("searchToggle");
 
 
-    if(searchEnabled){
+if(searchEnabled){
 
-        button.classList.add("active");
+button.classList.add("active");
 
-        button.innerHTML =
-            "🔎 البحث مفعّل";
+button.innerHTML =
+"🔎 البحث مفعّل";
 
-    }else{
+}else{
 
-        button.classList.remove("active");
+button.classList.remove("active");
 
-        button.innerHTML =
-            "🔎 البحث";
+button.innerHTML =
+"🔎 البحث";
 
-    }
+}
 
 }
 
 
 /* =========================
-   BV AI
+BV AI
 ========================= */
 
 const BV_BACKEND =
-    "https://bv-backend.lwsylfr78.workers.dev/chat";
+"https://bv-backend.lwsylfr78.workers.dev/chat";
 
 
 async function sendMessage(){
 
-    const input =
-        document.getElementById("aiInput");
+const input =
+document.getElementById("aiInput");
 
-    const text =
-        input.value.trim();
+const text =
+input.value.trim();
 
-    if(text === ""){
 
-        return;
+if(text === ""){
 
-    }
+return;
 
+}
 
-    const messages =
-        document.getElementById("messages");
 
+const messages =
+document.getElementById("messages");
 
-    /* رسالة الطالب */
 
-    const user =
-        document.createElement("div");
+/* رسالة الطالب */
 
-    user.className =
-        "message userMessage";
+const user =
+document.createElement("div");
 
-    user.textContent =
-        text;
+user.className =
+"message userMessage";
 
-    messages.appendChild(user);
+user.textContent =
+text;
 
-    input.value = "";
+messages.appendChild(user);
 
+input.value = "";
 
-    /* رسالة الانتظار */
 
-    const loading =
-        document.createElement("div");
+/* رسالة الانتظار */
 
-    loading.className =
-        "message bvMessage";
+const loading =
+document.createElement("div");
 
-    loading.textContent =
-        "🤖 BV يفكر...";
+loading.className =
+"message bvMessage";
 
-    messages.appendChild(loading);
+loading.textContent =
+"🤖 BV يفكر...";
 
-    messages.scrollTop =
-        messages.scrollHeight;
+messages.appendChild(loading);
 
+messages.scrollTop =
+messages.scrollHeight;
 
-    /* المحادثة السابقة */
 
-    const previousMessages = [];
+/* المحادثة السابقة */
 
-    const messageElements =
-        messages.querySelectorAll(".message");
+const previousMessages = [];
 
+const messageElements =
+messages.querySelectorAll(".message");
 
-    messageElements.forEach(function(element){
 
-        if(element === loading){
+messageElements.forEach(function(element){
 
-            return;
+if(element === loading){
 
-        }
+return;
 
-        const content =
-            element.textContent.trim();
+}
 
-        if(!content){
+const content =
+element.textContent.trim();
 
-            return;
+if(!content){
 
-        }
+return;
 
-        const isUser =
-            element.classList.contains("userMessage");
+}
 
+const isUser =
+element.classList.contains("userMessage");
 
-        previousMessages.push({
 
-            role:
-                isUser
-                ? "user"
-                : "assistant",
+previousMessages.push({
 
-            content:
-                content
+role:
+isUser
+? "user"
+: "assistant",
 
-        });
+content:
+content
 
-    });
+});
 
+});
 
-    /* =========================
-       أخذ الصف والمادة
-    ========================= */
 
-    const gradeElement =
-        document.getElementById("grade");
+try{
 
-    const subjectElement =
-        document.getElementById("subject");
+const response =
+await fetch(
 
-    const grade =
-        gradeElement
-        ? gradeElement.value
-        : "";
+BV_BACKEND,
 
-    const subject =
-        subjectElement
-        ? subjectElement.value
-        : "";
+{
 
+method:"POST",
 
-    try{
+headers:{
 
-        const response =
-            await fetch(
+"Content-Type":
+"application/json"
 
-                BV_BACKEND,
+},
 
-                {
+body:JSON.stringify({
 
-                    method:"POST",
+message:text,
 
-                    headers:{
+messages:
+previousMessages.slice(-20),
 
-                        "Content-Type":
-                            "application/json"
+mode:"study",
 
-                    },
+subject:"",
 
-                    body:JSON.stringify({
+level:""
 
-                        message:text,
+})
 
-                        messages:
-                            previousMessages.slice(-20),
+}
 
-                        mode:"study",
+);
 
-                        subject:subject,
 
-                        level:grade,
+if(!response.ok){
 
-                        searchEnabled:
-                            searchEnabled
+throw new Error(
+"HTTP " + response.status
+);
 
-                    })
+}
 
-                }
 
-            );
+const data =
+await response.json();
 
 
-        if(!response.ok){
+loading.remove();
 
-            throw new Error(
-                "HTTP " + response.status
-            );
 
-        }
+const reply =
+document.createElement("div");
 
+reply.className =
+"message bvMessage";
 
-        const data =
-            await response.json();
 
+if(data.success && data.answer){
 
-        loading.remove();
+reply.textContent =
+data.answer;
 
+reply.style.whiteSpace =
+"pre-wrap";
 
-        const reply =
-            document.createElement("div");
+}else{
 
-        reply.className =
-            "message bvMessage";
+reply.textContent =
+"⚠️ وصل الطلب إلى الخادم، لكن لم تصل إجابة الذكاء الاصطناعي.";
 
+}
 
-        if(data.success && data.answer){
 
-            reply.textContent =
-                data.answer;
+messages.appendChild(reply);
 
-            reply.style.whiteSpace =
-                "pre-wrap";
+messages.scrollTop =
+messages.scrollHeight;
 
-        }else{
 
-            reply.textContent =
-                "⚠️ وصل الطلب إلى الخادم، لكن لم تصل إجابة الذكاء الاصطناعي.";
+}catch(error){
 
-        }
+console.error(
+"BV AI Error:",
+error
+);
 
 
-        messages.appendChild(reply);
+loading.remove();
 
-        messages.scrollTop =
-            messages.scrollHeight;
 
+const errorMessage =
+document.createElement("div");
 
-    }catch(error){
+errorMessage.className =
+"message bvMessage";
 
-        console.error(
-            "BV AI Error:",
-            error
-        );
+errorMessage.textContent =
+"⚠️ حدث خطأ في الاتصال بـ BV AI. حاول مرة أخرى.";
 
 
-        loading.remove();
+messages.appendChild(
+errorMessage
+);
 
+messages.scrollTop =
+messages.scrollHeight;
 
-        const errorMessage =
-            document.createElement("div");
-
-        errorMessage.className =
-            "message bvMessage";
-
-        errorMessage.textContent =
-            "⚠️ حدث خطأ في الاتصال بـ BV AI. حاول مرة أخرى.";
-
-
-        messages.appendChild(
-            errorMessage
-        );
-
-        messages.scrollTop =
-            messages.scrollHeight;
-
-    }
+}
 
 }
 
 
 /* =========================
-   Enter = إرسال
+Enter = إرسال
 ========================= */
 
 document
-    .getElementById("aiInput")
-    .addEventListener(
-        "keydown",
-        function(event){
+.getElementById("aiInput")
+.addEventListener(
+"keydown",
+function(event){
 
-            if(event.key === "Enter"){
+if(event.key === "Enter"){
 
-                event.preventDefault();
+event.preventDefault();
 
-                sendMessage();
+sendMessage();
 
-            }
+}
 
-        }
-    );
+}
+);
 
 
 /* =========================
-   مدرستي
+مدرستي
 ========================= */
 
 function openCurriculum(){
 
-    const country =
-        document.getElementById("country").value;
+const country =
+document.getElementById("country").value;
 
-    const grade =
-        document.getElementById("grade").value;
+const grade =
+document.getElementById("grade").value;
 
-    const subject =
-        document.getElementById("subject").value;
+const subject =
+document.getElementById("subject").value;
 
-    const result =
-        document.getElementById("schoolResult");
-
-
-    if(!country || !grade || !subject){
-
-        result.style.display =
-            "block";
-
-        result.innerHTML =
-            "⚠️ اختر الدولة والصف والمادة أولًا.";
-
-        return;
-
-    }
+const result =
+document.getElementById("schoolResult");
 
 
-    let gradeName = "";
+if(!country || !grade || !subject){
+
+result.style.display =
+"block";
+
+result.innerHTML =
+"⚠️ اختر الدولة والصف والمادة أولًا.";
+
+return;
+
+}
 
 
-    if(grade === "third")
-        gradeName =
-            "الثالث متوسط";
-
-    if(grade === "fourth")
-        gradeName =
-            "الرابع الإعدادي";
-
-    if(grade === "fifth")
-        gradeName =
-            "الخامس الإعدادي";
-
-    if(grade === "sixth")
-        gradeName =
-            "السادس الإعدادي";
+let gradeName = "";
 
 
-    let subjectName = "";
+if(grade === "third")
+gradeName =
+"الثالث متوسط";
+
+if(grade === "fourth")
+gradeName =
+"الرابع الإعدادي";
+
+if(grade === "fifth")
+gradeName =
+"الخامس الإعدادي";
+
+if(grade === "sixth")
+gradeName =
+"السادس الإعدادي";
 
 
-    if(subject === "math")
-        subjectName =
-            "الرياضيات";
-
-    if(subject === "physics")
-        subjectName =
-            "الفيزياء";
-
-    if(subject === "chemistry")
-        subjectName =
-            "الكيمياء";
-
-    if(subject === "biology")
-        subjectName =
-            "الأحياء";
+let subjectName = "";
 
 
-    result.style.display =
-        "block";
+if(subject === "math")
+subjectName =
+"الرياضيات";
+
+if(subject === "physics")
+subjectName =
+"الفيزياء";
+
+if(subject === "chemistry")
+subjectName =
+"الكيمياء";
+
+if(subject === "biology")
+subjectName =
+"الأحياء";
 
 
-    result.innerHTML =
+result.style.display =
+"block";
 
-        "<b>🇮🇶 العراق</b><br><br>" +
 
-        "🎓 الصف: " +
-        gradeName +
-        "<br>" +
+result.innerHTML =
 
-        "📚 المادة: " +
-        subjectName +
-        "<br><br>" +
+"<b>🇮🇶 العراق</b><br><br>" +
 
-        "<b>📖 المنهج الدراسي</b>" +
+"🎓 الصف: " +
+gradeName +
+"<br>" +
 
-        "<button class='lessonButton' onclick='openBookFromSchool()'>" +
+"📚 المادة: " +
+subjectName +
+"<br><br>" +
 
-        "📖 فتح الكتاب" +
+"<b>📖 المنهج الدراسي</b>" +
 
-        "</button>" +
+"<button class='lessonButton' onclick='openBookFromSchool()'>" +
 
-        "<button class='lessonButton' onclick='showLessons()'>" +
+"📖 فتح الكتاب" +
 
-        "📚 الفصول والدروس" +
+"</button>" +
 
-        "</button>" +
+"<button class='lessonButton' onclick='showLessons()'>" +
 
-        "<button class='lessonButton' onclick='askBVAboutLesson()'>" +
+"📚 الفصول والدروس" +
 
-        "🤖 اسأل BV عن المنهج" +
+"</button>" +
 
-        "</button>";
+"<button class='lessonButton' onclick='askBVAboutLesson()'>" +
+
+"🤖 اسأل BV عن المنهج" +
+
+"</button>";
 
 }
 
 
 function openBookFromSchool(){
 
-    alert(
-        "📖 ربط الكتب الحقيقية بالمصادر المسموح بها سيكون في المرحلة التالية."
-    );
+alert(
+"📖 ربط الكتب الحقيقية بالمصادر المسموح بها سيكون في المرحلة التالية."
+);
 
 }
 
 
 function showLessons(){
 
-    const result =
-        document.getElementById("schoolResult");
+const result =
+document.getElementById("schoolResult");
 
 
-    result.innerHTML +=
+result.innerHTML +=
 
-        "<br><br>" +
+"<br><br>" +
 
-        "<div class='lessonCard'>" +
+"<div class='lessonCard'>" +
 
-        "📘 الفصل الأول" +
+"📘 الفصل الأول" +
 
-        "<br>" +
+"<br>" +
 
-        "<button onclick='openLesson()'>" +
+"<button onclick='openLesson()'>" +
 
-        "فتح الدروس" +
+"فتح الدروس" +
 
-        "</button>" +
+"</button>" +
 
-        "</div>" +
-
-
-        "<div class='lessonCard'>" +
-
-        "📗 الفصل الثاني" +
-
-        "<br>" +
-
-        "<button onclick='openLesson()'>" +
-
-        "فتح الدروس" +
-
-        "</button>" +
-
-        "</div>" +
+"</div>" +
 
 
-        "<div class='lessonCard'>" +
+"<div class='lessonCard'>" +
 
-        "📙 الفصل الثالث" +
+"📗 الفصل الثاني" +
 
-        "<br>" +
+"<br>" +
 
-        "<button onclick='openLesson()'>" +
+"<button onclick='openLesson()'>" +
 
-        "فتح الدروس" +
+"فتح الدروس" +
 
-        "</button>" +
+"</button>" +
 
-        "</div>";
+"</div>" +
+
+
+"<div class='lessonCard'>" +
+
+"📙 الفصل الثالث" +
+
+"<br>" +
+
+"<button onclick='openLesson()'>" +
+
+"فتح الدروس" +
+
+"</button>" +
+
+"</div>";
 
 }
 
 
 function openLesson(){
 
-    alert(
-        "📚 ستظهر الدروس الحقيقية بعد إضافة بيانات المناهج."
-    );
+alert(
+"📚 ستظهر الدروس الحقيقية بعد إضافة بيانات المناهج."
+);
 
 }
 
 
 function askBVAboutLesson(){
 
-    openScreen("aiScreen");
+openScreen("aiScreen");
 
 
-    const messages =
-        document.getElementById("messages");
+const messages =
+document.getElementById("messages");
 
 
-    const reply =
-        document.createElement("div");
+const reply =
+document.createElement("div");
 
 
-    reply.className =
-        "message bvMessage";
+reply.className =
+"message bvMessage";
 
 
-    reply.textContent =
-        "🎓 اكتب سؤالك عن المنهج وسأساعدك في فهمه.";
+reply.textContent =
+"🎓 اكتب سؤالك عن المنهج وسأساعدك في فهمه.";
 
 
-    messages.appendChild(reply);
+messages.appendChild(reply);
 
 
-    messages.scrollTop =
-        messages.scrollHeight;
+messages.scrollTop =
+messages.scrollHeight;
 
 }
 
 
 /* =========================
-   مكتبتي
+مكتبتي
 ========================= */
 
 function searchBook(){
 
-    const input =
-        document.getElementById("bookSearch");
+const input =
+document.getElementById("bookSearch");
 
-    const text =
-        input.value.trim();
+const text =
+input.value.trim();
 
-    const result =
-        document.getElementById("bookResult");
-
-
-    if(text === ""){
-
-        result.style.display =
-            "block";
-
-        result.innerHTML =
-            "⚠️ اكتب اسم الكتاب أولًا.";
-
-        return;
-
-    }
+const result =
+document.getElementById("bookResult");
 
 
-    result.style.display =
-        "block";
+if(text === ""){
+
+result.style.display =
+"block";
+
+result.innerHTML =
+"⚠️ اكتب اسم الكتاب أولًا.";
+
+return;
+
+}
 
 
-    result.innerHTML =
+result.style.display =
+"block";
 
-        "<b>📚 البحث عن:</b><br><br>" +
 
-        text +
+result.innerHTML =
 
-        "<br><br>" +
+"<b>📚 البحث عن:</b><br><br>" +
 
-        "📚 سيتم تطوير مكتبة BV وإضافة الكتب والمصادر المسموح بها." +
+text +
 
-        "<button onclick='openInternalBook()'>" +
+"<br><br>" +
 
-        "📖 فتح من BV" +
+"📚 سيتم تطوير مكتبة BV وإضافة الكتب والمصادر المسموح بها." +
 
-        "</button>";
+"<button onclick='openInternalBook()'>" +
+
+"📖 فتح من BV" +
+
+"</button>";
 
 }
 
 
 function openInternalBook(){
 
-    alert(
-        "📖 سيتم فتح الكتاب من مكتبة BV بعد إضافة الكتب."
-    );
+alert(
+"📖 سيتم فتح الكتاب من مكتبة BV بعد إضافة الكتب."
+);
 
 }
 
 </script>
 
 </body>
+
     </html>
