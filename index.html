@@ -30,12 +30,8 @@ scroll-behavior:smooth;
 body{
 margin:0;
 min-height:100vh;
-
 font-family:Arial,sans-serif;
-
 color:white;
-
-/* الخلفية الرئيسية */
 
 background:
 
@@ -66,21 +62,15 @@ linear-gradient(
 );
 
 background-attachment:fixed;
-
 overflow-x:hidden;
-
 }
-
-/* توهج عام للخلفية */
 
 body::before{
 
 content:"";
 
 position:fixed;
-
 inset:0;
-
 pointer-events:none;
 
 background:
@@ -112,9 +102,7 @@ cursor:pointer;
 .page{
 
 min-height:100vh;
-
 display:flex;
-
 flex-direction:column;
 
 }
@@ -126,7 +114,6 @@ flex-direction:column;
 header{
 
 padding:24px 20px;
-
 text-align:center;
 
 border-bottom:
@@ -145,9 +132,7 @@ box-shadow:
 .logo{
 
 font-size:40px;
-
 font-weight:bold;
-
 letter-spacing:2px;
 
 background:
@@ -160,9 +145,7 @@ linear-gradient(
 );
 
 -webkit-background-clip:text;
-
 background-clip:text;
-
 color:transparent;
 
 text-shadow:
@@ -173,11 +156,8 @@ text-shadow:
 .subtitle{
 
 font-size:13px;
-
 opacity:.65;
-
 margin-top:5px;
-
 letter-spacing:3px;
 
 }
@@ -189,13 +169,10 @@ letter-spacing:3px;
 .homeMain{
 
 flex:1;
-
 padding:25px 18px;
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
 
 }
@@ -203,7 +180,6 @@ justify-content:center;
 .welcome{
 
 text-align:center;
-
 margin-bottom:30px;
 
 }
@@ -211,7 +187,6 @@ margin-bottom:30px;
 .welcome h1{
 
 font-size:27px;
-
 margin-bottom:10px;
 
 text-shadow:
@@ -222,7 +197,6 @@ text-shadow:
 .welcome p{
 
 opacity:.75;
-
 line-height:1.8;
 
 }
@@ -230,32 +204,24 @@ line-height:1.8;
 .homeButtons{
 
 width:100%;
-
 max-width:520px;
-
 margin:auto;
 
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:14px;
 
 }
 
-/* أزرار الرئيسية */
-
 .homeButton{
 
 position:relative;
-
 overflow:hidden;
 
 border:
 1px solid rgba(70,130,255,.25);
 
 border-radius:18px;
-
 padding:23px 10px;
 
 background:
@@ -267,9 +233,7 @@ rgba(3,10,25,.9)
 );
 
 color:white;
-
 font-size:16px;
-
 font-weight:bold;
 
 box-shadow:
@@ -289,7 +253,6 @@ transition:.25s ease;
 content:"";
 
 position:absolute;
-
 inset:0;
 
 background:
@@ -328,11 +291,8 @@ transform:scale(.97);
 .homeIcon{
 
 position:relative;
-
 display:block;
-
 font-size:31px;
-
 margin-bottom:8px;
 
 }
@@ -344,11 +304,8 @@ margin-bottom:8px;
 footer{
 
 text-align:center;
-
 padding:15px;
-
 font-size:12px;
-
 opacity:.45;
 
 }
@@ -361,9 +318,7 @@ opacity:.45;
 .aiScreen{
 
 display:none;
-
 min-height:100vh;
-
 flex-direction:column;
 
 }
@@ -375,9 +330,7 @@ flex-direction:column;
 .topBar{
 
 display:flex;
-
 align-items:center;
-
 padding:17px;
 
 border-bottom:
@@ -393,15 +346,10 @@ backdrop-filter:blur(12px);
 .backButton{
 
 border:none;
-
 background:transparent;
-
 color:white;
-
 font-size:27px;
-
 margin-left:12px;
-
 transition:.2s;
 
 }
@@ -409,7 +357,6 @@ transition:.2s;
 .backButton:hover{
 
 color:#4d91ff;
-
 transform:translateX(3px);
 
 }
@@ -417,7 +364,6 @@ transform:translateX(3px);
 .screenTitle{
 
 font-size:22px;
-
 font-weight:bold;
 
 }
@@ -429,11 +375,8 @@ font-weight:bold;
 .content{
 
 width:100%;
-
 max-width:600px;
-
 margin:auto;
-
 padding:22px 18px;
 
 }
@@ -445,9 +388,7 @@ BV AI
 .messages{
 
 flex:1;
-
 overflow-y:auto;
-
 padding:20px;
 
 scrollbar-width:thin;
@@ -461,19 +402,13 @@ transparent;
 .message{
 
 max-width:95%;
-
 padding:13px 16px;
-
 border-radius:17px;
-
 margin-bottom:12px;
 
 line-height:1.8;
-
 overflow-wrap:anywhere;
-
 word-break:break-word;
-
 white-space:pre-wrap;
 
 border:
@@ -495,7 +430,6 @@ rgba(4,12,28,.78)
 );
 
 margin-left:auto;
-
 backdrop-filter:blur(10px);
 
 }
@@ -511,7 +445,6 @@ linear-gradient(
 );
 
 color:white;
-
 margin-right:auto;
 
 border:
@@ -544,11 +477,8 @@ rgba(5,20,45,.7);
 color:white;
 
 border-radius:12px;
-
 padding:8px 13px;
-
 margin-bottom:8px;
-
 transition:.2s;
 
 }
@@ -573,7 +503,6 @@ rgba(100,170,255,.55);
 .inputRow{
 
 display:flex;
-
 gap:8px;
 
 }
@@ -586,11 +515,9 @@ border:
 1px solid rgba(70,130,255,.25);
 
 outline:none;
-
 border-radius:15px;
 
 padding:15px;
-
 font-size:15px;
 
 background:
@@ -637,9 +564,7 @@ linear-gradient(
 );
 
 color:white;
-
 font-size:20px;
-
 transition:.2s;
 
 }
@@ -673,7 +598,6 @@ border:
 1px solid rgba(70,130,255,.2);
 
 border-radius:18px;
-
 margin-bottom:18px;
 
 box-shadow:
@@ -686,9 +610,7 @@ backdrop-filter:blur(12px);
 .label{
 
 display:block;
-
 margin-top:16px;
-
 margin-bottom:8px;
 
 }
@@ -703,14 +625,12 @@ border:
 1px solid rgba(70,130,255,.2);
 
 border-radius:13px;
-
 font-size:15px;
 
 background:
 #071426;
 
 color:white;
-
 outline:none;
 
 }
@@ -725,9 +645,7 @@ rgba(60,140,255,.7);
 .primaryButton{
 
 width:100%;
-
 margin-top:18px;
-
 padding:15px;
 
 border:
@@ -744,9 +662,7 @@ linear-gradient(
 );
 
 color:white;
-
 font-size:16px;
-
 font-weight:bold;
 
 box-shadow:
@@ -768,7 +684,6 @@ box-shadow:
 .schoolResult{
 
 display:none;
-
 margin-top:18px;
 
 background:
@@ -783,7 +698,6 @@ border:
 1px solid rgba(70,130,255,.18);
 
 border-radius:16px;
-
 padding:17px;
 
 line-height:1.9;
@@ -801,7 +715,6 @@ border:
 1px solid rgba(70,130,255,.25);
 
 padding:14px;
-
 margin-top:9px;
 
 border-radius:13px;
@@ -810,7 +723,6 @@ background:
 rgba(10,30,65,.8);
 
 color:white;
-
 font-weight:bold;
 
 transition:.2s;
@@ -834,9 +746,7 @@ rgba(70,140,255,.6);
 .librarySearch{
 
 display:flex;
-
 gap:8px;
-
 margin-bottom:20px;
 
 }
@@ -851,9 +761,7 @@ border:
 outline:none;
 
 border-radius:14px;
-
 padding:15px;
-
 font-size:15px;
 
 background:
@@ -887,7 +795,6 @@ linear-gradient(
 );
 
 color:white;
-
 font-size:19px;
 
 }
@@ -895,7 +802,6 @@ font-size:19px;
 .libraryInfo{
 
 padding:16px;
-
 border-radius:16px;
 
 background:
@@ -916,9 +822,7 @@ line-height:1.8;
 .bookResult{
 
 display:none;
-
 margin-top:15px;
-
 padding:17px;
 
 border-radius:16px;
@@ -934,9 +838,7 @@ border:
 .bookResult button{
 
 width:100%;
-
 margin-top:10px;
-
 padding:13px;
 
 border:
@@ -953,7 +855,6 @@ linear-gradient(
 );
 
 color:white;
-
 font-weight:bold;
 
 }
@@ -978,7 +879,6 @@ border:
 1px solid rgba(70,130,255,.18);
 
 border-radius:16px;
-
 margin-bottom:12px;
 
 box-shadow:
@@ -1001,7 +901,6 @@ border:
 1px solid rgba(70,130,255,.18);
 
 border-radius:15px;
-
 margin-bottom:10px;
 
 }
@@ -1009,9 +908,7 @@ margin-bottom:10px;
 .lessonCard button{
 
 margin-top:10px;
-
 width:100%;
-
 padding:12px;
 
 border:
@@ -1028,7 +925,6 @@ linear-gradient(
 );
 
 color:white;
-
 font-weight:bold;
 
 }
@@ -1089,10 +985,6 @@ box-shadow:
 
 <body>
 
-<!-- =========================
-الصفحة الرئيسية
-========================= -->
-
 <div class="page" id="homePage">
 
 <header>
@@ -1131,7 +1023,6 @@ BV AI
 
 </button>
 
-
 <button
 class="homeButton"
 onclick="openScreen('schoolScreen')">
@@ -1142,7 +1033,6 @@ onclick="openScreen('schoolScreen')">
 
 </button>
 
-
 <button
 class="homeButton"
 onclick="openScreen('libraryScreen')">
@@ -1152,7 +1042,6 @@ onclick="openScreen('libraryScreen')">
 مكتبتي
 
 </button>
-
 
 <button
 class="homeButton"
@@ -1197,7 +1086,6 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="messages" id="messages">
 
 <div class="message bvMessage">
@@ -1216,7 +1104,6 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="aiBottom">
 
 <button
@@ -1227,7 +1114,6 @@ onclick="toggleSearch()">
 🔎 البحث
 
 </button>
-
 
 <div class="inputRow">
 
@@ -1273,13 +1159,11 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="content">
 
 <h2>
 اختر منهجك
 </h2>
-
 
 <div class="schoolCard">
 
@@ -1298,7 +1182,6 @@ onclick="goHome()">
 </option>
 
 </select>
-
 
 <label class="label">
 🎓 الصف
@@ -1328,7 +1211,6 @@ onclick="goHome()">
 
 </select>
 
-
 <label class="label">
 📚 المادة
 </label>
@@ -1357,7 +1239,6 @@ onclick="goHome()">
 
 </select>
 
-
 <button
 class="primaryButton"
 onclick="openCurriculum()">
@@ -1367,7 +1248,6 @@ onclick="openCurriculum()">
 </button>
 
 </div>
-
 
 <div
 class="schoolResult"
@@ -1402,13 +1282,11 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="content">
 
 <h2>
 ابحث عن كتاب
 </h2>
-
 
 <div class="librarySearch">
 
@@ -1425,7 +1303,6 @@ placeholder="اكتب اسم الكتاب...">
 
 </div>
 
-
 <div class="libraryInfo">
 
 📚 اكتب اسم الكتاب الذي تبحث عنه.
@@ -1440,7 +1317,6 @@ placeholder="اكتب اسم الكتاب...">
 سيتم تطوير المكتبة وإضافة الكتب والمصادر لاحقًا.
 
 </div>
-
 
 <div
 class="bookResult"
@@ -1475,13 +1351,11 @@ onclick="goHome()">
 
 </div>
 
-
 <div class="content">
 
 <h2>
 تخصيص BV
 </h2>
-
 
 <div class="settingItem">
 
@@ -1500,7 +1374,6 @@ English
 ويمكن إضافة لغات أخرى لاحقًا.
 
 </div>
-
 
 <div class="settingItem">
 
@@ -1537,7 +1410,6 @@ document.getElementById("settingsScreen").style.display = "none";
 
 }
 
-
 function openScreen(id){
 
 hideAll();
@@ -1552,7 +1424,6 @@ screen.style.display = "flex";
 }
 
 }
-
 
 function goHome(){
 
@@ -1569,14 +1440,12 @@ document.getElementById("homePage").style.display = "flex";
 
 let searchEnabled = false;
 
-
 function toggleSearch(){
 
 searchEnabled = !searchEnabled;
 
 const button =
 document.getElementById("searchToggle");
-
 
 if(searchEnabled){
 
@@ -1601,8 +1470,10 @@ button.innerHTML =
 BV AI
 ========================= */
 
+/* تم تحديث الرابط إلى الـWorker الجديد */
+
 const BV_BACKEND =
-"https://bv-backend.lwsylfr78.workers.dev/chat";
+"https://bv-ai-backend.lwsylfr78.workers.dev/chat";
 
 
 async function sendMessage(){
@@ -1613,13 +1484,11 @@ document.getElementById("aiInput");
 const text =
 input.value.trim();
 
-
 if(text === ""){
 
 return;
 
 }
-
 
 const messages =
 document.getElementById("messages");
@@ -1665,7 +1534,6 @@ const previousMessages = [];
 const messageElements =
 messages.querySelectorAll(".message");
 
-
 messageElements.forEach(function(element){
 
 if(element === loading){
@@ -1685,7 +1553,6 @@ return;
 
 const isUser =
 element.classList.contains("userMessage");
-
 
 previousMessages.push({
 
@@ -1778,7 +1645,6 @@ reply.textContent =
 
 }
 
-
 messages.appendChild(reply);
 
 messages.scrollTop =
@@ -1792,7 +1658,6 @@ console.error(
 error
 );
 
-
 loading.remove();
 
 
@@ -1804,7 +1669,6 @@ errorMessage.className =
 
 errorMessage.textContent =
 "⚠️ حدث خطأ في الاتصال بـ BV AI. حاول مرة أخرى.";
-
 
 messages.appendChild(
 errorMessage
@@ -1874,7 +1738,6 @@ return;
 
 let gradeName = "";
 
-
 if(grade === "third")
 gradeName =
 "الثالث متوسط";
@@ -1893,7 +1756,6 @@ gradeName =
 
 
 let subjectName = "";
-
 
 if(subject === "math")
 subjectName =
@@ -1984,7 +1846,6 @@ result.innerHTML +=
 
 "</div>" +
 
-
 "<div class='lessonCard'>" +
 
 "📗 الفصل الثاني" +
@@ -1998,7 +1859,6 @@ result.innerHTML +=
 "</button>" +
 
 "</div>" +
-
 
 "<div class='lessonCard'>" +
 
@@ -2030,25 +1890,19 @@ function askBVAboutLesson(){
 
 openScreen("aiScreen");
 
-
 const messages =
 document.getElementById("messages");
-
 
 const reply =
 document.createElement("div");
 
-
 reply.className =
 "message bvMessage";
-
 
 reply.textContent =
 "🎓 اكتب سؤالك عن المنهج وسأساعدك في فهمه.";
 
-
 messages.appendChild(reply);
-
 
 messages.scrollTop =
 messages.scrollHeight;
